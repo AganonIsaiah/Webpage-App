@@ -1,10 +1,14 @@
-const Message =( {message }) => {
+const Message = ({ message }) => {
+  const isReceived = message.sender !== "Isaiah Aganon";
+  
   return (
-    <div className={`chat-bubble ${message.sender === "Isaiah Aganon" ? 'sent' : 'received'}`}>
+    <div className="message-container">
+      <div className={`chat-bubble ${isReceived ? 'received' : 'sent'}`}>
         <p>{message.text}</p>
+      </div>
+      {!isReceived && <div className="message-status">Delivered</div>}
     </div>
   );
 };
-  
+
 export default Message;
-  

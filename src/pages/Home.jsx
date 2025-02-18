@@ -1,35 +1,65 @@
-
-import {useState } from 'react';
+import { useState } from 'react';
 import ChatWindow from '../components/ChatWindow';
 import messages from '../data/messages';
+import '../styles/Home.css';
 
 const Home = () => {
     const [input, setInput] = useState('');
     const [chatHistory, setChatHistory] = useState(messages.start);
+    const [isSending, setIsSending] = useState(false);
 
     const handleSendMessage = () => {
-        if (input.trim()) {
+        if (input.trim() && !isSending) {
+            setIsSending(true);
+            setChatHistory(prev => [...prev, { text: input, sender: 'User' }]);
+            const userMessage = { text: input, sender: 'User' };
             const newMsg = messages[input.trim().toLowerCase()] || messages.default;
 
-            if (newMsg == messages.default)
-                setChatHistory([...newMsg])
-            else
-                setChatHistory(prev => [...prev, ...newMsg]);
+            if (newMsg === messages.default) {
+                if (input === "clear") setChatHistory([...messages.start]);
+                else setChatHistory([...messages.default]);
+            } else {
+                setChatHistory([userMessage]);
+                newMsg.forEach((message, index) => {
+                    setTimeout(() => {
+                        setChatHistory(prev => [...prev, {
+                            ...message,
+                            timestamp: new Date(Date.now() + (index + 1) * 500)
+                        }]);
+                    }, (index + 1) * 500);
+                });
+            }
+
+            setInput('');
+            setIsSending(false);
         }
-        setInput('')
     };
 
     return (
         <div className="home">
-            <ChatWindow messages = {chatHistory} />
+            <div className="message-header">
+                <div className="contact-info">From: +1 (365) 880-9158</div>
+                <div className="message-actions">
+                    <span>
+                        <i className="fas fa-video"></i>
+                    </span>
+                    <span>
+                        <i className="fas fa-info-circle"></i>
+                    </span>
+                </div>
+            </div>
 
-            <input 
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                placeHolder="Type a command (e.g., 'send all')"
-            />
+            <ChatWindow messages={chatHistory} />
+
+            <div className="message-input">
+                <input
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                    placeholder="Write a text: (e.g., 'view all cmds')"
+                />
+            </div>
         </div>
     );
 };
