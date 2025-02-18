@@ -1,0 +1,24 @@
+## Structures
+COMPONENTS // Reusable UI components
+    - Message.jsx Message Bubbles
+    - ChatWindow.jsx UI Outer box design
+
+
+PAGES - Holds all components, pages are passed to App.jsx
+    - Home.jsx - Main page that mimics apple imessage UI
+    - Music.jsx - Intro page that plays music 
+
+DATA // Holds all messages
+    - messages.js
+
+
+STYLES // CSS styling
+
+
+ASSETS // Holds images, icons
+    - Holds images, resume.pdf
+
+
+
+## UI IDEAS
+- Light/Dark mode
