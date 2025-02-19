@@ -43,7 +43,6 @@ const messages = {
 
         // Job 1
         "-",
-        "JOB 1",
         "Software Developer Intern",
         "RBC",
         "May. 2025 -- Dec. 2025",
@@ -51,10 +50,9 @@ const messages = {
         
         // Job 2
         "-",
-        "JOB 2",
         "Teaching Assistant (Fundamentals of Web Applications)",
         "Carleton University",
-        "Jan. 2025 - Apr. 2025",
+        "Jan. 2025 -- Apr. 2025",
 
         "Delivered weekly tutorials for a class section of 33 students, covering web development using HTML, CSS, JavaScript, SQLite, and Node.js for back-end development.",
         "Guided students through hands-on projects utilizing Node.js, Express.js, and React, emphasizing RESTful APIs, component-based architecture, and state management.",
@@ -62,7 +60,6 @@ const messages = {
        
         // Job 3
         "-",
-        "JOB 3",
         "Teaching Assistant (Fundamentals of Web Applications)",
         "Carleton University",
         "Sep. 2024 -- Dec. 2024",
