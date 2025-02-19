@@ -1,11 +1,6 @@
-# React + Vite
+# Description
+- Digital profile webpage created with React. 
+- Displays interactive, command-based messages that showcase my biography, skill set, resume, work experience, and projects.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # Webpage
-# Webpage
-# Webpage
+https://webpage-iiojhtmg3-aganonisaiahs-projects.vercel.app/ 
