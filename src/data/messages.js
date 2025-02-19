@@ -18,25 +18,33 @@ const messages = {
     "view all cmds": createMessages([
         'Type "send all" to view everything',
         'Type "bio" to view my biography',
-        'Type "resume" to view my resume',
+        'Type "skills" to view my skill set',
         'Type "experience" to view all of my experience',
         'Type "projects" to view all of my projects',
-        'Type "info" to receive my contact information'
+        'Type "info" to receive my contact information',
+        'Type "resume" to view my resume',
     ]),
 
     "bio": createMessages([
-        "BIOGRAPHY",
+        "ABOUT ME",
         "-",
         "Hey! I'm Isaiah Aganon!",
         "I am a 3rd year at Carleton University.",
         "I am currently pursuing a Bachelors in Computer Science (Honours) degree.",
-        "Along with Computer Science, I minor in Mathematics and I am taking a specialization in Artificial Intelligence & Machine Learning."
+        "Along with Computer Science, I minor in Mathematics and I am taking a specialization in Artificial Intelligence & Machine Learning.",
+        "I graduate in June 2027!"
     ]),
-
+    "skills": createMessages([
+        "SKILLS",
+        "-",
+        "Programming Languages: Java, JavaScript, TypeScript, C, C++, SQL",
+        "Frameworks & Libraries: React, Spring Boot, Node.js, Deno, Express.js, Tailwind CSS",
+        "Developer Tools: Git, Docker, Linux, Vim, VS Code, IntelliJ, Vercel",
+    ]),
     "resume": createMessages([
         "RESUME",
         "-",
-        `<iframe src="${resumePDF}" width="100%" height="600px" style="border:none;"></iframe>`
+        `<iframe src="${resumePDF}" width="700px" height="940px" style="border:none;"></iframe>`
     ]),
     "experience": createMessages([
         "EXPERIENCE",
@@ -71,12 +79,14 @@ const messages = {
 
     "projects": createMessages([
         "PROJECTS",
+
         // Webpage App
         "-",
         "Webpage App",
         "Created an iMessage-styled digital profile webpage with a React front-end and Node.js back-end, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
         "Skills: JavaScript, Node.js, React, CSS, Vercel",
         "https://github.com/AganonIsaiah/Webpage-App",
+
         // French App
         "-",
         "French Speaking App",
@@ -117,10 +127,11 @@ messages["start"] = createMessages([
 
 messages["send all"] = [
     ...messages["bio"],
-    ...messages["resume"],
+    ...messages["skills"],
     ...messages["experience"],
     ...messages["projects"],
-    ...messages["info"]
+    ...messages["info"],
+    ...messages["resume"],
 ]
 
 messages["default"] = [

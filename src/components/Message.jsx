@@ -1,10 +1,9 @@
-
-
 const Message = ({ message }) => {
   const isReceived = message.sender !== "Isaiah Aganon";
+  const isPDF = message.text.includes("<iframe"); 
 
   const renderMessageContent = () => {
-    if (message.text.includes("<iframe") || message.text.includes("<a")) {
+    if (isPDF || message.text.includes("<a")) {
       return <div dangerouslySetInnerHTML={{ __html: message.text }} />;
     }
     return renderTextWithLinks(message.text);
@@ -31,7 +30,7 @@ const Message = ({ message }) => {
 
   return (
     <div className="message-container">
-      <div className={`chat-bubble ${isReceived ? 'received' : 'sent'}`}>
+      <div className={`${isPDF ? "pdf-bubble" : "chat-bubble"} ${isReceived ? "received" : "sent"}`}>
         {renderMessageContent()}
       </div>
       {isReceived && <div className="message-status">Delivered</div>}

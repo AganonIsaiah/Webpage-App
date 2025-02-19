@@ -96,12 +96,22 @@ html, body {
     margin: 0;
     font-size: 16px;
 }
-.chat-bubble iframe {
-    width: 500px; 
-    height: 675px; 
-    border: none;
-    display: block; 
+
+.pdf-bubble {
+    max-width: 100%; 
+     margin-bottom: -1px;
+    padding: 8px 12px;
+    border-radius: 18px;
+    position: relative;
+    word-wrap: break-word; 
+} 
+
+.pdf-bubble iframe {
+    width: 700px; 
+    height: 940px; 
 }
+
+
 .received {
     align-self: flex-end;
     background-color: #0b93f6;
