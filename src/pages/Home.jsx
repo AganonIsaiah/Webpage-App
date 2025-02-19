@@ -26,7 +26,7 @@ const Home = () => {
                             ...message,
                             timestamp: new Date(Date.now() + (index + 1) * 500)
                         }]);
-                    }, (index + 1) * 500);
+                    }, (index + 1) * 750);
                 });
             }
 
@@ -38,7 +38,7 @@ const Home = () => {
     return (
         <div className="home">
             <div className="message-header">
-                <div className="contact-info">From: +1 (365) 880-9158</div>
+                <div className="contact-info">To: Isaiah Aganon</div>
                 <div className="message-actions">
                     <span>
                         <i className="fas fa-video"></i>

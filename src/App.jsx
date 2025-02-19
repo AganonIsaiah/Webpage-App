@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import Home from "./pages/Home"
+import Music from './pages/Music';
 
 function App() {
   return (
     <div className="app">
-      <Home />
+      <Music />
     </div>
   );
 }

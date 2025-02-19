@@ -6,11 +6,10 @@ COMPONENTS // Reusable UI components
 
 PAGES - Holds all components, pages are passed to App.jsx
     - Home.jsx - Main page that mimics apple imessage UI
-    - Music.jsx - Intro page that plays music 
+    - Music.jsx - Intro page that plays music, when the user presses play, the music starts and switches to Home page
 
 DATA // Holds all messages
     - messages.js
-
 
 STYLES // CSS styling
 
