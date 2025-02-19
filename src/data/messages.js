@@ -36,7 +36,7 @@ const messages = {
     "resume": createMessages([
         "RESUME",
         "-",
-        `<iframe src="${resumePDF}" width="100%" height="500px" style="border:none;"></iframe>`
+        `<iframe src="${resumePDF}" width="100%" height="600px" style="border:none;"></iframe>`
     ]),
     "experience": createMessages([
         "EXPERIENCE",
@@ -71,24 +71,29 @@ const messages = {
 
     "projects": createMessages([
         "PROJECTS",
-        
+        // Webpage App
+        "-",
+        "Webpage App",
+        "Created an iMessage-styled digital profile webpage with a React front-end and Node.js back-end, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
+        "Skills: JavaScript, Node.js, React, CSS, Vercel",
+        "https://github.com/AganonIsaiah/Webpage-App",
         // French App
         "-",
-        "FRENCH SPEAKING APP",
+        "French Speaking App",
         "Designed and implemented a full-stack application leveraging Spring Boot to support French language learners in practicing and receiving feedback on their oral production skills.",
         "Skills: Java, Spring Boot, HTML, CSS",
         "https://github.com/AganonIsaiah/French-Speaking-App",
 
         // Music App
         "-",
-        "MUSIC PLAYLIST APP",
+        "Music Playlist App",
         "Developed a dynamic full-stack music playlist application with a Handlebars.js front-end and Node.js back-end, allowing users to create, organize, listen, and manage personalized music playlists.",
         "Skills: JavaScript, Node.js, Handlebars.js, SQLite",
         "https://github.com/AganonIsaiah/Music-Playlist-App",
 
         // NETWORK INFO APP
         "-",
-        "NETWORK INFORMATION APP",
+        "Network Information App",
         "Engineered a comprehensive tool for managing Wi-Fi network information with a React front-end and Node.js back-end, enabling users to display, add, and remove networks",
         "Skills: JavaScript, Node.js, React, CSS",
         "https://github.com/AganonIsaiah/Network-Information-App",
