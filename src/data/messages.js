@@ -95,7 +95,7 @@ const messages = {
 
         // NETWORK INFO APP
         "🛜 Network Information App",
-        "Engineered a comprehensive tool for managing Wi-Fi network information with a React front-end and Node.js back-end, enabling users to display, add, and remove networks",
+        "Engineered a comprehensive tool for managing Wi-Fi network information with a React front-end and Node.js back-end, enabling users to display, add, and remove networks.",
         "Skills: JavaScript, Node.js, React, CSS",
         "https://github.com/AganonIsaiah/Network-Information-App",
         
