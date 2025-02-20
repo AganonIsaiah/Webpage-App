@@ -107,26 +107,11 @@ html, body {
 } 
 
 .pdf-bubble iframe {
-    width: 90vw;  
-    height: 80vh;  
-    max-width: 700px; 
+ 
+    max-width: 100%; 
     border-radius: 10px;
 }
 
- 
-@media (max-width: 768px) {
-    .pdf-bubble iframe {
-        width: 95vw;  
-        height: 60vh;  
-    }
-}
-
-@media (max-width: 480px) {
-    .pdf-bubble iframe {
-        width: 100vw;  
-        height: 50vh;  
-    }
-}
 
 .received {
     align-self: flex-end;
