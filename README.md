@@ -3,4 +3,4 @@
 - Displays interactive, command-based messages that showcase my biography, skill set, resume, work experience, and projects.
 
 # Webpage
-https://webpage-iiojhtmg3-aganonisaiahs-projects.vercel.app/ 
+https://webpage-aganonisaiahs-projects.vercel.app/
