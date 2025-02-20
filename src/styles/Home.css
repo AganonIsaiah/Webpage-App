@@ -99,7 +99,7 @@ html, body {
 
 .pdf-bubble {
     max-width: 100%; 
-     margin-bottom: -1px;
+    margin-bottom: -1px;
     padding: 8px 12px;
     border-radius: 18px;
     position: relative;
@@ -107,10 +107,26 @@ html, body {
 } 
 
 .pdf-bubble iframe {
-    width: 700px; 
-    height: 940px; 
+    width: 90vw;  
+    height: 80vh;  
+    max-width: 700px; 
+    border-radius: 10px;
 }
 
+ 
+@media (max-width: 768px) {
+    .pdf-bubble iframe {
+        width: 95vw;  
+        height: 60vh;  
+    }
+}
+
+@media (max-width: 480px) {
+    .pdf-bubble iframe {
+        width: 100vw;  
+        height: 50vh;  
+    }
+}
 
 .received {
     align-self: flex-end;
