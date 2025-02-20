@@ -107,11 +107,9 @@ html, body {
 } 
 
 .pdf-bubble iframe {
- 
-    max-width: 100%; 
     border-radius: 10px;
+    justify-content: center;
 }
-
 
 .received {
     align-self: flex-end;
