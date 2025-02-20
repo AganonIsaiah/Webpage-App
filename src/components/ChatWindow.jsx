@@ -23,7 +23,7 @@ const ChatWindow = ({ messages }) => {
     };
     
     const formattedDate = new Date(date).toLocaleString('en-US', options);
-    return formattedDate.replace(',', '').replace(/(\d{1,2}):(\d{2}).*/, 'at $1:$2').replace(/ at /, ' at '); 
+    return formattedDate.replace(',', ''); 
   };
   
   const groupMessagesByDate = (msgs) => {
