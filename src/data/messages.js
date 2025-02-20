@@ -41,7 +41,7 @@ const messages = {
     ]),
     "resume": createMessages([
         "RESUME",
-        `<iframe src="${resumePDF}" width="700px" height="940px" style="border:none;"></iframe>`
+        `<iframe src="${resumePDF}" width="400px" height="500px" style="border:none;"></iframe>`
     ]),
     "experience": createMessages([
         "EXPERIENCE",
