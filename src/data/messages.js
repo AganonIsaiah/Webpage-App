@@ -27,38 +27,34 @@ const messages = {
 
     "bio": createMessages([
         "ABOUT ME",
-        "-",
-        "Hey! I'm Isaiah Aganon!",
-        "I am a 3rd year at Carleton University.",
-        "I am currently pursuing a Bachelors in Computer Science (Honours) degree.",
-        "Along with Computer Science, I minor in Mathematics and I am taking a specialization in Artificial Intelligence & Machine Learning.",
-        "I graduate in June 2027!"
+        "👋 Hey! I'm Isaiah Aganon!",
+        "🏫 I am a 3rd year at Carleton University.",
+        "🖥️ I am currently pursuing a Bachelors in Computer Science (Honours) degree.",
+        "🧮 I minor in Mathematics and specialize in AI & ML.",
+        "🧑‍💻 I have an interest in Human-Computer Interactions and web development!"
     ]),
     "skills": createMessages([
         "SKILLS",
-        "-",
-        "Programming Languages: Java, JavaScript, TypeScript, C, C++, SQL",
-        "Frameworks & Libraries: React, Spring Boot, Node.js, Deno, Express.js, Tailwind CSS",
-        "Developer Tools: Git, Docker, Linux, Vim, VS Code, IntelliJ, Vercel",
+        "💻 Programming Languages: Java, JavaScript, TypeScript, C, C++, SQL",
+        "📦 Frameworks & Libraries: React, Spring Boot, Node.js, Deno, Express.js, Tailwind CSS",
+        "🛠️ Developer Tools: Git, Docker, Linux, Vim, VS Code, IntelliJ, Vercel",
     ]),
     "resume": createMessages([
         "RESUME",
-        "-",
         `<iframe src="${resumePDF}" width="700px" height="940px" style="border:none;"></iframe>`
     ]),
     "experience": createMessages([
         "EXPERIENCE",
 
         // Job 1
-        "-",
-        "Software Developer Intern",
+        "💻🛠️📟 Software Developer Intern",
         "RBC",
         "May. 2025 -- Dec. 2025",
+
         "Incoming intern.",
         
         // Job 2
-        "-",
-        "Teaching Assistant (Fundamentals of Web Applications)",
+        "🏫👨‍🏫💡 Teaching Assistant (Fundamentals of Web Applications)",
         "Carleton University",
         "Jan. 2025 -- Apr. 2025",
 
@@ -67,8 +63,7 @@ const messages = {
         "Taught debugging techniques in Node.js and React applications, including using browser DevTools and React DevTools for performance tuning and troubleshooting.",
        
         // Job 3
-        "-",
-        "Teaching Assistant (Fundamentals of Web Applications)",
+        "📚👨‍🏫🖥️ Teaching Assistant (Fundamentals of Web Applications)",
         "Carleton University",
         "Sep. 2024 -- Dec. 2024",
 
@@ -81,29 +76,25 @@ const messages = {
         "PROJECTS",
 
         // Webpage App
-        "-",
-        "Webpage App",
+        "📄 Webpage App",
         "Created an iMessage-styled digital profile webpage with a React front-end and Node.js back-end, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
         "Skills: JavaScript, Node.js, React, CSS, Vercel",
         "https://github.com/AganonIsaiah/Webpage-App",
 
         // French App
-        "-",
-        "French Speaking App",
+        "🇫🇷 French Speaking App",
         "Designed and implemented a full-stack application leveraging Spring Boot to support French language learners in practicing and receiving feedback on their oral production skills.",
         "Skills: Java, Spring Boot, HTML, CSS",
         "https://github.com/AganonIsaiah/French-Speaking-App",
 
         // Music App
-        "-",
-        "Music Playlist App",
+        "🥁 Music Playlist App",
         "Developed a dynamic full-stack music playlist application with a Handlebars.js front-end and Node.js back-end, allowing users to create, organize, listen, and manage personalized music playlists.",
         "Skills: JavaScript, Node.js, Handlebars.js, SQLite",
         "https://github.com/AganonIsaiah/Music-Playlist-App",
 
         // NETWORK INFO APP
-        "-",
-        "Network Information App",
+        "🛜 Network Information App",
         "Engineered a comprehensive tool for managing Wi-Fi network information with a React front-end and Node.js back-end, enabling users to display, add, and remove networks",
         "Skills: JavaScript, Node.js, React, CSS",
         "https://github.com/AganonIsaiah/Network-Information-App",
@@ -112,7 +103,6 @@ const messages = {
 
     "info": createMessages([
         "CONTACT INFORMATION",
-        "-",
         "☎️ Phone Number: +1 (365) 880-9158",
         "📤 Email: IsaiahAganon@cmail.carleton.ca",
         "🖥️ GitHub: https://github.com/AganonIsaiah",
