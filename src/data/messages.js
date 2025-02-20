@@ -21,7 +21,7 @@ const messages = {
         'Type "skills" to view my skill set',
         'Type "experience" to view all of my experience',
         'Type "projects" to view all of my projects',
-        'Type "info" to receive my contact information',
+        'Type "info" to view my contact information',
         'Type "resume" to view my resume',
     ]),
 
@@ -115,7 +115,7 @@ const messages = {
         "-",
         "☎️ Phone Number: +1 (365) 880-9158",
         "📤 Email: IsaiahAganon@cmail.carleton.ca",
-        "🖥️ Github: https://github.com/AganonIsaiah",
+        "🖥️ GitHub: https://github.com/AganonIsaiah",
         "💼 Linkedin: https://www.linkedin.com/in/isaiah-aganon"
     ]),
 };
