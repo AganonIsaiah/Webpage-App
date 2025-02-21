@@ -32,7 +32,7 @@ export default function Music() {
     useEffect(() => {
         if (isPlaying) {
             setProgress(0);
-            const duration = 5000;
+            const duration = 2000;
             const stepTime = 10;
             const step = (100 / (duration/stepTime));
 
