@@ -15,9 +15,9 @@
   .music-background {
     position: absolute;
     inset: 0;
-    background: url("/file.svg") center/cover no-repeat;
-    filter: blur(40px);
-    opacity: 0.4;
+    background: url("/en.png") center/cover no-repeat;
+    filter: blur(10px);
+    opacity: 0.70;
     
   }
   

@@ -78,7 +78,7 @@ export default function Music() {
                 ) : (
                     <>
                         <div className="song-info">
-                            <img src="/file.svg" alt="Album Art" className="album-art" />
+                            <img src="/en.png" alt="Album Art" className="album-art" />
                             <h2>Isaiah's Mix</h2>
                             <p>Music</p>
                         </div>
