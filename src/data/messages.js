@@ -47,25 +47,28 @@ const messages = {
         "EXPERIENCE",
 
         // Job 1
-        "💻🛠️📟 Software Developer Intern",
+        "💻🛠️ Software Developer Intern",
         "RBC",
-        "May. 2025 -- Dec. 2025",
+        "🗓️ May. 2025 -- Dec. 2025",
+        "Skills: ",
 
         "Incoming intern.",
         
         // Job 2
-        "🏫👨‍🏫💡 Teaching Assistant (Fundamentals of Web Applications)",
+        "🏫💡 Teaching Assistant (Fundamentals of Web Applications)",
         "Carleton University",
-        "Jan. 2025 -- Apr. 2025",
+        "🗓️ Jan. 2025 -- Apr. 2025",
+        "Skills: JavaScript, HTML, CSS, Node.js, Express.js, React, SQLite",
 
         "Delivered weekly tutorials for a class section of 33 students, covering web development using HTML, CSS, JavaScript, SQLite, and Node.js for back-end development.",
         "Guided students through hands-on projects utilizing Node.js, Express.js, and React, emphasizing RESTful APIs, component-based architecture, and state management.",
         "Taught debugging techniques in Node.js and React applications, including using browser DevTools and React DevTools for performance tuning and troubleshooting.",
        
         // Job 3
-        "📚👨‍🏫🖥️ Teaching Assistant (Fundamentals of Web Applications)",
+        "📚👨‍🏫 Teaching Assistant (Fundamentals of Web Applications)",
         "Carleton University",
-        "Sep. 2024 -- Dec. 2024",
+        "🗓️ Sep. 2024 -- Dec. 2024",
+        "Skills: JavaScript, TypeScript, HTML, CSS, Deno, Deno Fresh, Tailwind CSS, SQLite",
 
         "Conducted weekly tutorials for a class section of 47 students, focusing on web development fundamentals, including HTML, CSS, JavaScript, SQLite, and Deno for back-end development.",
         "Introduced students to Deno’s Fresh framework, TypeScript, and Tailwind CSS, guiding them through the process of building a full-stack web application project, integrating front-end and back-end components.",
