@@ -7,14 +7,8 @@ export default function Music() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [time, setTime] = useState(new Date());
     const [showMessage, setShowMessage] = useState(false);
+    const [progress, setProgress] = useState(0);
     const navigate = useNavigate();
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
 
     const formattedTime = time.toLocaleTimeString("en-US", {
         hour: "2-digit",
@@ -28,13 +22,34 @@ export default function Music() {
         day: "numeric",
     });
 
-    const handlePlayClick = () => {
-        setIsPlaying(!isPlaying);
-
-        setTimeout(() => {
-            setShowMessage(true);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date());
         }, 1000);
-    };
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        if (isPlaying) {
+            setProgress(0);
+            const duration = 5000;
+            const stepTime = 10;
+            const step = (100 / (duration/stepTime));
+
+            const progressInterval = setInterval(() =>{
+                setProgress((prev) => {
+                    if (prev >= 100) {
+                        clearInterval(progressInterval);
+                        setShowMessage(true)
+                        return 100;
+                    }
+                    return prev+step;
+                });
+            }, stepTime);
+
+            return () => clearInterval(progressInterval);
+        }
+    }, [isPlaying]);
 
     const handleMessageClick = () => {
         navigate("/home");
@@ -69,12 +84,12 @@ export default function Music() {
                         </div>
 
                         <div className="progress-bar">
-                            <div className="progress"></div>
+                            <div className="progress" style={{width: `${progress}%`}}></div>
                         </div>
 
                         <div className="music-controls">
                             <SkipBack className="icon" />
-                            <button onClick={handlePlayClick} className="play-button">
+                            <button onClick= {() => setIsPlaying((prev) => !prev)} className="play-button">
                                 {isPlaying ? <Pause className="icon" /> : <Play className="icon" />}
                             </button>
                             <SkipForward className="icon" />
