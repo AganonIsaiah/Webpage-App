@@ -12,23 +12,18 @@ const Home = () => {
         if (input.trim() && !isSending) {
             setIsSending(true);
             setChatHistory(prev => [...prev, { text: input, sender: 'User' }]);
-            const userMessage = { text: input, sender: 'User' };
             const newMsg = messages[input.trim().toLowerCase()] || messages.default;
 
-            if (newMsg === messages.default) {
-                if (input === "clear") setChatHistory([...messages.start]);
-                else setChatHistory([...messages.default]);
-            } else {
-                setChatHistory([userMessage]);
-                newMsg.forEach((message, index) => {
-                    setTimeout(() => {
-                        setChatHistory(prev => [...prev, {
-                            ...message,
-                            timestamp: new Date(Date.now() + (index + 1) * 500)
-                        }]);
-                    }, (index + 1) * 750);
-                });
-            }
+            newMsg.forEach((message, index) => {
+                setTimeout(() => {
+                    setChatHistory(prev => [...prev, {
+                        ...message,
+                        timestamp: new Date(Date.now() + (index + 1) * 500)
+                    }]);
+                }, (index + 1) * 750);
+            });
+
+
 
             setInput('');
             setIsSending(false);

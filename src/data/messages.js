@@ -125,7 +125,7 @@ messages["send all"] = [
 ]
 
 messages["default"] = [
-    {text: "Incorrect input, retry.", sender: NAME},
+    ...createMessages(["Hey!"]),
     ...messages["view all cmds"]
 ]
 export default messages;
