@@ -10,9 +10,7 @@
         5. "Send contact info" - Simple text (strings) that link to my linkedin and github
 */
 import resumePDF from '../assets/resume.pdf';
-const NAME = "Isaiah Aganon";
-
-const createMessages = (texts) => texts.map(text => ({ text, sender: NAME }));
+const createMessages = (texts) => texts.map(text => ({ text, sender: "Isaiah Aganon"}));
 
 const messages = {
     "view all cmds": createMessages([
@@ -111,12 +109,11 @@ const messages = {
         "🖥️ GitHub: https://github.com/AganonIsaiah",
         "💼 Linkedin: https://www.linkedin.com/in/isaiah-aganon"
     ]),
-};
 
-// Predefined commands
-messages["start"] = createMessages([
-    "Welcome to my webpage!"
-]);
+    "start": createMessages([
+        "Welcome to my webpage!"
+    ])
+};
 
 messages["send all"] = [
     ...messages["bio"],

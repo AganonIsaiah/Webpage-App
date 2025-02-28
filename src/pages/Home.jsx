@@ -23,8 +23,6 @@ const Home = () => {
                 }, (index + 1) * 750);
             });
 
-
-
             setInput('');
             setIsSending(false);
         }

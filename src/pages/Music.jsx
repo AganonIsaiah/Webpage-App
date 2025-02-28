@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Play, Pause, SkipBack, SkipForward } from "lucide-react";
 import { useNavigate } from "react-router-dom"; 
 import "../styles/Music.css";
@@ -9,6 +9,22 @@ export default function Music() {
     const [showMessage, setShowMessage] = useState(false);
     const [progress, setProgress] = useState(0);
     const navigate = useNavigate();
+    const audioRef = useRef(null);
+    const progressIntervalRef = useRef(null);
+
+    useEffect(() => {
+        const song = "sch"
+        audioRef.current = new Audio(`src/assets/${song}.wav`);
+        return () => {
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.src = "";
+            }
+            if (progressIntervalRef.current) {
+                clearInterval(progressIntervalRef.current);
+            }
+        };
+    }, []);
 
     const formattedTime = time.toLocaleTimeString("en-US", {
         hour: "2-digit",
@@ -29,37 +45,62 @@ export default function Music() {
         return () => clearInterval(interval);
     }, []);
 
-    useEffect(() => {
+    const togglePlayPause = () => {
+        if (!audioRef.current) return;
+
         if (isPlaying) {
-            setProgress(0);
-            const duration = 2000;
-            const stepTime = 10;
-            const step = (100 / (duration/stepTime));
-
-            const progressInterval = setInterval(() =>{
-                setProgress((prev) => {
-                    if (prev >= 100) {
-                        clearInterval(progressInterval);
-                        setShowMessage(true)
-                        return 100;
-                    }
-                    return prev+step;
-                });
-            }, stepTime);
-
-            return () => clearInterval(progressInterval);
+            audioRef.current.pause();
+            if (progressIntervalRef.current) {
+                clearInterval(progressIntervalRef.current);
+                progressIntervalRef.current = null;
+            }
+            setIsPlaying(false);
+        } else {
+            audioRef.current.currentTime = 0; 
+            
+            const playPromise = audioRef.current.play();
+            if (playPromise !== undefined) {
+                playPromise
+                    .then(() => {
+                        console.log("Audio playing successfully");
+                        setIsPlaying(true);
+                        
+                        setProgress(0);
+                        const duration = 5000;
+                        const stepTime = 10;
+                        const step = (100 / (duration/stepTime));
+                        
+                        progressIntervalRef.current = setInterval(() => {
+                            setProgress((prev) => {
+                                if (prev >= 100) {
+                                    if (progressIntervalRef.current) {
+                                        clearInterval(progressIntervalRef.current);
+                                        progressIntervalRef.current = null;
+                                    }
+                                    setShowMessage(true);
+                                    setIsPlaying(false);
+                                    return 100;
+                                }
+                                return prev + step;
+                            });
+                        }, stepTime);
+                    })
+                    .catch(error => {
+                        console.error("Audio play failed:", error);
+                        alert("Could not play audio. Please check that the file exists at: /sch.wav");
+                        setIsPlaying(false);
+                    });
+            }
         }
-    }, [isPlaying]);
+    };
 
-    const handleMessageClick = () => {
+    const handleMessageClick = () => { 
         navigate("/home");
     };
 
     return (
         <div className="music-container">
             <div className="music-background"></div>
-
-
             <div className="music-player">
             
                 <div className="lock-info">
@@ -89,15 +130,17 @@ export default function Music() {
 
                         <div className="music-controls">
                             <SkipBack className="icon" />
-                            <button onClick= {() => setIsPlaying((prev) => !prev)} className="play-button">
+                            <button 
+                                onClick={togglePlayPause} 
+                                className="play-button"
+                                type="button"
+                            >
                                 {isPlaying ? <Pause className="icon" /> : <Play className="icon" />}
                             </button>
                             <SkipForward className="icon" />
                         </div>
                     </>
                 )}
-
-
             </div>
         </div>
     );
