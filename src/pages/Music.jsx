@@ -66,7 +66,7 @@ export default function Music() {
                         setIsPlaying(true);
                         
                         setProgress(0);
-                        const duration = 5000;
+                        const duration = 5700;
                         const stepTime = 10;
                         const step = (100 / (duration/stepTime));
                         
@@ -77,8 +77,12 @@ export default function Music() {
                                         clearInterval(progressIntervalRef.current);
                                         progressIntervalRef.current = null;
                                     }
-                                    setShowMessage(true);
-                                    setIsPlaying(false);
+                                    setTimeout(() => {
+                                        setShowMessage(true);
+                                        setIsPlaying(false);
+                                    }, 50)
+                                    
+                                
                                     return 100;
                                 }
                                 return prev + step;
