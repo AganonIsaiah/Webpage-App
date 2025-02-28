@@ -14,7 +14,7 @@ export default function Music() {
 
     useEffect(() => {
         const song = "sch"
-        audioRef.current = new Audio(`src/assets/${song}.wav`);
+        audioRef.current = new Audio(`/${song}.wav`);
         return () => {
             if (audioRef.current) {
                 audioRef.current.pause();
