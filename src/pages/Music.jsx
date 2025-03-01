@@ -91,7 +91,6 @@ export default function Music() {
                     })
                     .catch(error => {
                         console.error("Audio play failed:", error);
-                        alert("Could not play audio. Please check that the file exists at: /sch.wav");
                         setIsPlaying(false);
                     });
             }
@@ -120,6 +119,7 @@ export default function Music() {
                         </div>
                         <div className="ios-message-text">Wants to send you a message.</div>
                     </div>
+
                 ) : (
                     <>
                         <div className="song-info">
