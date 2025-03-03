@@ -13,7 +13,7 @@ export default function Music() {
     const progressIntervalRef = useRef(null);
 
     useEffect(() => {
-        const song = "centrecity"
+        const song = "birdseyeview"
         audioRef.current = new Audio(`/${song}.wav`);
         return () => {
             if (audioRef.current) {
