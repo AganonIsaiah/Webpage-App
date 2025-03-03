@@ -3,28 +3,37 @@ import { Play, Pause, SkipBack, SkipForward } from "lucide-react";
 import { useNavigate } from "react-router-dom"; 
 import "../styles/Music.css";
 
+const globalAudio = new Audio();
+
 export default function Music() {
     const [isPlaying, setIsPlaying] = useState(false);
     const [time, setTime] = useState(new Date());
     const [showMessage, setShowMessage] = useState(false);
     const [progress, setProgress] = useState(0);
+    const [messageClicked, setMessageClicked] = useState(false);
     const navigate = useNavigate();
-    const audioRef = useRef(null);
+    const audioRef = useRef(globalAudio);
     const progressIntervalRef = useRef(null);
 
     useEffect(() => {
-        const song = "birdseyeview"
-        audioRef.current = new Audio(`/${song}.wav`);
+        const song = "birdseyeview";
+        if (!audioRef.current.src || !audioRef.current.src.includes(song)) {
+            audioRef.current.src = `/${song}.wav`;
+        }
+        const handleEnded = () => {
+            setIsPlaying(false);
+            navigate("/home");
+        };
+        
+        audioRef.current.addEventListener('ended', handleEnded);
+        
         return () => {
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current.src = "";
-            }
             if (progressIntervalRef.current) {
                 clearInterval(progressIntervalRef.current);
             }
+            audioRef.current.removeEventListener('ended', handleEnded);
         };
-    }, []);
+    }, [navigate]);
 
     const formattedTime = time.toLocaleTimeString("en-US", {
         hour: "2-digit",
@@ -66,7 +75,7 @@ export default function Music() {
                         setIsPlaying(true);
                         
                         setProgress(0);
-                        const duration = 5700;
+                        const duration = 1400;
                         const stepTime = 10;
                         const step = (100 / (duration/stepTime));
                         
@@ -81,7 +90,6 @@ export default function Music() {
                                         setShowMessage(true);
                                         setIsPlaying(false);
                                     }, 50)
-                                    
                                 
                                     return 100;
                                 }
@@ -98,7 +106,26 @@ export default function Music() {
     };
 
     const handleMessageClick = () => { 
-        navigate("/home");
+        setMessageClicked(true);
+    
+        if (audioRef.current) {
+            audioRef.current.currentTime = 109.5; 
+            
+            const endedHandler = () => {
+                audioRef.current.pause();
+            };
+            
+            audioRef.current.removeEventListener('ended', endedHandler);
+            audioRef.current.addEventListener('ended', endedHandler, { once: true });
+            
+            audioRef.current.play().catch(error => {
+                console.error("Failed to play audio from 1:49:", error);
+            });
+        }
+        
+        setTimeout(() =>{
+            navigate("/home");
+        }, 500)
     };
 
     return (
@@ -112,7 +139,10 @@ export default function Music() {
                 </div>
 
                 {showMessage ? (
-                    <div className="ios-message-bubble" onClick={handleMessageClick}>
+                    <div 
+                        className={`ios-message-bubble ${messageClicked ? 'ios-message-clicked' : ''}`}
+                        onClick={handleMessageClick}
+                    >
                         <div className="ios-message-header">
                             <div className="ios-message-sender">Isaiah Aganon</div>
                             <div className="ios-message-time">now</div>
