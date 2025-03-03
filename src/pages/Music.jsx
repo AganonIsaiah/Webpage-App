@@ -109,7 +109,7 @@ export default function Music() {
         setMessageClicked(true);
     
         if (audioRef.current) {
-            audioRef.current.currentTime = 109.5; 
+            audioRef.current.currentTime = 109.2; 
             
             const endedHandler = () => {
                 audioRef.current.pause();
