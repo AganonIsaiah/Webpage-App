@@ -170,14 +170,14 @@ input::placeholder {
 @media (max-width: 768px) {
     .pdf-bubble iframe {
         max-width: 100%;
-        height: auto; /* Change from fixed 500px */
-        min-height: 600px; /* Set a minimum height that shows enough content */
+        height: auto;  
+        min-height: 600px;  
     }
 }
 
 @media (max-width: 480px) {
     .pdf-bubble iframe {
-        height: auto; /* Change from fixed 450px */
-        min-height: 550px; /* Adjust as needed */
+        height: auto;  
+        min-height: 550px; 
     }
 }

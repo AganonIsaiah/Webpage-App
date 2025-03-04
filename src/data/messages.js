@@ -21,7 +21,6 @@ const messages = {
         'Type "projects" to view all of my projects',
         'Type "info" to view my contact information',
         'Type "resume" to view my resume',
-        'Type "clear" to clear the chat'
     ]),
 
     "bio": createMessages([

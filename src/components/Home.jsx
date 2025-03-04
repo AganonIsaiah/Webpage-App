@@ -12,10 +12,6 @@ const Home = () => {
         if (input.trim() && !isSending) {
             setIsSending(true);
             
-            if (input.trim() === 'clear') {
-                setChatHistory([]);
-            } 
-            
             setChatHistory(prev => [...prev, { text: input, sender: 'User' }]);
             const newMsg = messages[input.trim().toLowerCase()] || messages.default;
            
