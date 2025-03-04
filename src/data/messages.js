@@ -21,6 +21,7 @@ const messages = {
         'Type "projects" to view all of my projects',
         'Type "info" to view my contact information',
         'Type "resume" to view my resume',
+        'Type "clear" to clear the chat'
     ]),
 
     "bio": createMessages([
@@ -39,7 +40,7 @@ const messages = {
     ]),
     "resume": createMessages([
         "RESUME",
-        `<iframe src="${resumePDF}" width="400px" height="500px" style="border:none;"></iframe>`
+        `<iframe src="${resumePDF}" width="100%" height="100%" style="border:none;"></iframe>`
     ]),
     "experience": createMessages([
         "EXPERIENCE",
@@ -110,7 +111,7 @@ const messages = {
         "💼 Linkedin: https://www.linkedin.com/in/isaiah-aganon"
     ]),
 
-    "start": createMessages([
+    "clear": createMessages([
         "Welcome to my webpage!"
     ])
 };

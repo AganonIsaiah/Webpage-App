@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Message = ({ message }) => {
   const isReceived = message.sender !== "Isaiah Aganon";
   const isPDF = message.text.includes("<iframe"); 
@@ -38,4 +40,4 @@ const Message = ({ message }) => {
   );
 };
 
-export default Message;
+export default React.memo(Message);

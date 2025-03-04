@@ -1,19 +1,24 @@
 import { useState } from 'react';
-import ChatWindow from '../components/ChatWindow';
+import ChatWindow from './ChatWindow';
 import messages from '../data/messages';
 import '../styles/Home.css';
 
 const Home = () => {
     const [input, setInput] = useState('');
-    const [chatHistory, setChatHistory] = useState(messages.start);
+    const [chatHistory, setChatHistory] = useState(messages.clear);
     const [isSending, setIsSending] = useState(false);
 
     const handleSendMessage = () => {
         if (input.trim() && !isSending) {
             setIsSending(true);
+            
+            if (input.trim() === 'clear') {
+                setChatHistory([]);
+            } 
+            
             setChatHistory(prev => [...prev, { text: input, sender: 'User' }]);
             const newMsg = messages[input.trim().toLowerCase()] || messages.default;
-
+           
             newMsg.forEach((message, index) => {
                 setTimeout(() => {
                     setChatHistory(prev => [...prev, {
