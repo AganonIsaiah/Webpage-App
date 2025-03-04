@@ -106,10 +106,10 @@ html, body {
     border: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 100%) {
     .pdf-bubble iframe {
-        width: 400px;  
-        height: 600px;  
+        width: 330px;  
+        height: 500px;  
         border-radius: 10px;
         display: block;
         margin: 10px auto; 
