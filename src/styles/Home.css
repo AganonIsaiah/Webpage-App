@@ -109,10 +109,11 @@ html, body {
 @media (max-width: 768px) {
     .pdf-bubble iframe {
         width: 100%;  
-        max-width: 100%;  
-        height: 60vh;  
-        transform: scale(0.75); 
-        transform-origin: 0 0; 
+        height: 100%;  
+        border-radius: 10px;
+        display: block;
+        margin: 10px auto; 
+        border: none;
     }
 }
 
