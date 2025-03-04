@@ -168,30 +168,16 @@ input::placeholder {
     color: #8e8e93;
 }
 @media (max-width: 768px) {
-    .chat-bubble, .pdf-bubble {
-        max-width: 85%;
-    }
-    
     .pdf-bubble iframe {
-        max-width: 70%;
-        height: 500px;
+        max-width: 100%;
+        height: auto; /* Change from fixed 500px */
+        min-height: 600px; /* Set a minimum height that shows enough content */
     }
 }
 
 @media (max-width: 480px) {
-    .chat-bubble, .pdf-bubble {
-        max-width: 90%;
-    }
-    
     .pdf-bubble iframe {
-        height: 450px;
-    }
-    
-    .message-header {
-        padding: 10px 8px;
-    }
-    
-    .message-actions {
-        gap: 10px;
+        height: auto; /* Change from fixed 450px */
+        min-height: 550px; /* Adjust as needed */
     }
 }
