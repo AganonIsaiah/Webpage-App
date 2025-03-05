@@ -47,17 +47,18 @@ export default function Music() {
     }, []);
 
     const handleSkipForward = () => {
-        const nextIndex = (currentSongIndex + 1 + songs.length) % songs.length;
-        setCurrentSongIndex(nextIndex);
-        resetPlay(nextIndex);
+        setCurrentSongIndex(prevIndex => 
+            Math.abs(prevIndex + 1) % songs.length
+        );
+        resetPlay(Math.abs(currentSongIndex + 1) % songs.length);
     };
-
+    
     const handleSkipBack = () => {
-        const prevIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-        setCurrentSongIndex(prevIndex);
-        resetPlay(prevIndex);
+        setCurrentSongIndex(prevIndex => 
+            Math.abs(prevIndex - 1) % songs.length
+        );
+        resetPlay(Math.abs(currentSongIndex - 1) % songs.length);
     };
-
     const resetPlay = (index) => {
         if (audioRef.current) {
             audioRef.current.pause();
