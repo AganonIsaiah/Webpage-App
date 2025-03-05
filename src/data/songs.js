@@ -1,8 +1,6 @@
 export const songs = [
     "birdseyeview.wav",
-    "fantasyisland.wav",
-    "fgh.wav",
-    "centrecity.wav",
-    "sch.wav",
-    "protro"
+    "fipt1.wav",
+    "fipt2.wav",
+    "fipt3.wav",
 ]
