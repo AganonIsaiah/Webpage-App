@@ -132,13 +132,20 @@ export default function Music() {
     };
 
     const handleProgressClick = (e) => {
-        const progressBar = e.target;
-        const newProgress = (e.clientX - progressBar.getBoundingClientRect().left) / progressBar.offsetWidth;
-        const newTime = newProgress * duration;
-        audioRef.current.currentTime = newTime;
-        setProgress(newProgress * 100);
-    };
+        const progressBar = e.target.closest('.progress-container');
+        const rect = progressBar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const barWidth = progressBar.offsetWidth;
+        const newProgress = Math.max(0, Math.min(100, (clickX / barWidth) * 100));
+        const newTime = (newProgress / 100) * duration;
+        
 
+        if (audioRef.current) {
+            audioRef.current.currentTime = newTime;
+            setProgress(newProgress);
+        }
+    };
+    
     return (
         <div className="music-container">
             <div className="music-background"></div>
