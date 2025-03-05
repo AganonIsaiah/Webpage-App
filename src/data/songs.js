@@ -1,5 +1,5 @@
 export const songs = [
-    "adeus",
+    "adeus.wav",
     "birdseyeview.wav",
     "fipt1.wav",
     "fipt2.wav",
