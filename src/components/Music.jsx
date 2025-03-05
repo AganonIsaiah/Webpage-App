@@ -47,7 +47,7 @@ export default function Music() {
     }, []);
 
     const handleSkipForward = () => {
-        const nextIndex = (currentSongIndex + 1) % songs.length;
+        const nextIndex = (currentSongIndex + 1 + songs.length) % songs.length;
         setCurrentSongIndex(nextIndex);
         resetPlay(nextIndex);
     };
