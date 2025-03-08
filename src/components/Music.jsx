@@ -20,7 +20,7 @@ export default function Music() {
 
     useEffect(() => {
         
-        audioRef.current = new Audio(songs[currentSongIndex]);
+        audioRef.current = new Audio(songs[currentSongIndex].file);
         audioRef.current.addEventListener("loadedmetadata", () => {
             setDuration(audioRef.current.duration); 
         });
@@ -169,14 +169,15 @@ export default function Music() {
                     </div>
                 )}
 
-                {!showMessage && !messageShown && (
+                {!showMessage && !messageShown ? (
                     <div className="song-info">
                         <img src="/en.png" alt="Album Art" className="album-art" />
                         <h2>Isaiah's Mix</h2>
-                        <p>Music</p>
                     </div>
+                ) : (
+                    <h3 className="song-title">{songs[currentSongIndex].name}</h3>
                 )}
-
+ 
                 <div className="progress-container" onClick={handleProgressClick}>
                     <div className="progress-bar">
                         <div className="progress" style={{width: `${progress}%`}}></div>
