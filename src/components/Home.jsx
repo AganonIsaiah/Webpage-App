@@ -21,7 +21,7 @@ const Home = () => {
                         ...message,
                         timestamp: new Date(Date.now() + (index + 1) * 500)
                     }]);
-                }, (index + 1) * 750);
+                }, (index + 1) * 550);
             });
 
             setInput('');

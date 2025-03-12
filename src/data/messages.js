@@ -107,7 +107,7 @@ const messages = {
         "☎️ Phone Number: +1 (365) 880-9158",
         "📤 Email: IsaiahAganon@cmail.carleton.ca",
         "🖥️ GitHub: https://github.com/AganonIsaiah",
-        "💼 Linkedin: https://www.linkedin.com/in/isaiah-aganon"
+        "💼 LinkedIn: https://www.linkedin.com/in/isaiah-aganon"
     ]),
 
     "clear": createMessages([
