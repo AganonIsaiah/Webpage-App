@@ -9,7 +9,7 @@
         4. "Send projects" -  Simple, brief, text (strings) describing the project, followed by link and .pdf 
         5. "Send contact info" - Simple text (strings) that link to my linkedin and github
 */
-import resumePDF from '../assets/resume.pdf';
+import resumePDF from '../assets/Resume_Isaiah_Aganon.pdf';
 const createMessages = (texts) => texts.map(text => ({ text, sender: "Isaiah Aganon"}));
 
 const messages = {
@@ -78,7 +78,7 @@ const messages = {
 
         // Webpage App
         "📄 Webpage App",
-        "Created an iMessage-styled digital profile webpage with a React front-end and Node.js back-end, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
+        "Created an iMessage-styled digital profile webpage with React and Node.js, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
         "Skills: JavaScript, Node.js, React, CSS, Vercel",
         "https://github.com/AganonIsaiah/Webpage-App",
 
@@ -95,10 +95,10 @@ const messages = {
         "https://github.com/AganonIsaiah/Music-Playlist-App",
 
         // NETWORK INFO APP
-        "🛜 Network Information App",
-        "Engineered a comprehensive tool for managing Wi-Fi network information with a React front-end and Node.js back-end, enabling users to display, add, and remove networks.",
-        "Skills: JavaScript, Node.js, React, CSS",
-        "https://github.com/AganonIsaiah/Network-Information-App",
+        "🗓️ Calendar App",
+        "Designed a full-stack calendar application with React and Node.js, enabling users to manage events while displaying local time and weather data via OpenWeatherMap API.",
+        "Skills: JavaScript, Node.js, Express.js, React, CSS, PostgreSQL",
+        "https://github.com/AganonIsaiah/Calendar-App",
         
     ]),
 
