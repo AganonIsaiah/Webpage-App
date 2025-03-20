@@ -1,4 +1,5 @@
 export const songs = [
+    { name: "Venn Diagrams", file : "venn.wav"},
     { name: "Fantasy Island Pt. 1", file: "fipt2.wav" },
     { name: "Fantasy Island Pt. 2", file: "fipt1.wav" },
     { name: "Fantasy Island Pt. 3", file: "fipt3.wav" },
