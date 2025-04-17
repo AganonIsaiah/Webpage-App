@@ -118,7 +118,7 @@ export default function Music() {
                         }, 100);  
                     })
                     .catch(error => {
-                     //   console.error("Audio play failed:", error);
+                        console.error("Audio play failed:", error);
                         setIsPlaying(false);
                     });
             }
