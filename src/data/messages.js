@@ -28,8 +28,7 @@ const messages = {
         "👋 Hey! I'm Isaiah Aganon!",
         "🏫 I am a 3rd year at Carleton University.",
         "🖥️ I am currently pursuing a Bachelors in Computer Science (Honours) degree.",
-        "🧮 I minor in Mathematics and specialize in AI & ML.",
-        "🧑‍💻 I have an interest in Human-Computer Interactions and web development!"
+        "🧮 I minor in Mathematics and have an interest in web development!"
     ]),
     "skills": createMessages([
         "SKILLS",
