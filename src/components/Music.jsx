@@ -99,14 +99,14 @@ export default function Music() {
             if (playPromise !== undefined) {
                 playPromise
                     .then(() => {
-                        console.log("Audio playing successfully");
+                        // console.log("Audio playing successfully");
                         setIsPlaying(true);
 
                         
                         messageTimerRef.current = setTimeout(() => {
                             setShowMessage(true);
                             setMessageShown(true);  
-                        }, 1400);  
+                        }, 9400);  
 
       
                         progressIntervalRef.current = setInterval(() => {
@@ -118,7 +118,7 @@ export default function Music() {
                         }, 100);  
                     })
                     .catch(error => {
-                        console.error("Audio play failed:", error);
+                     //   console.error("Audio play failed:", error);
                         setIsPlaying(false);
                     });
             }
