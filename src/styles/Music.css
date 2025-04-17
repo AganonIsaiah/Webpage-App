@@ -34,21 +34,22 @@
   font-size: 80px;
   font-weight: 600;
   letter-spacing: -2px;
-  margin: 0;
   color: white; 
+  margin: 0px;
+  margin-bottom: -25px;
 }
 
 .date {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.7); 
-  margin: 0;
+  margin-bottom: -5px;
 }
 
 .album-art {
   width: 100%;
   max-width: 300px;
   border-radius: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .song-info {
