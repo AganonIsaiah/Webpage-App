@@ -27,11 +27,11 @@
 
 .lock-info {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .time {
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 600;
   letter-spacing: -2px;
   color: white; 
@@ -66,7 +66,7 @@
 }
 
 .song-info p {
-  font-size: 16px;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.7); 
   margin: 5px 0 0;
 }
