@@ -106,7 +106,7 @@ export default function Music() {
                         messageTimerRef.current = setTimeout(() => {
                             setShowMessage(true);
                             setMessageShown(true);  
-                        }, 9400);  
+                        }, 1400);  
 
       
                         progressIntervalRef.current = setInterval(() => {
