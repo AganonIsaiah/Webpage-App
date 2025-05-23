@@ -9,7 +9,7 @@
         4. "Send projects" -  Simple, brief, text (strings) describing the project, followed by link and .pdf 
         5. "Send contact info" - Simple text (strings) that link to my linkedin and github
 */
-import resumePDF from '../assets/Resume_Isaiah_Aganon.pdf';
+const resumePDF ='/assets/Resume_Isaiah_Aganon.pdf'
 const createMessages = (texts) => texts.map(text => ({ text, sender: "Isaiah Aganon"}));
 
 const messages = {

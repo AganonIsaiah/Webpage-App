@@ -1,4 +1,4 @@
-import Message from "./Message";
+import Message from './Message';
 import { useEffect, useRef } from 'react';
 
 const ChatWindow = ({ messages }) => {
