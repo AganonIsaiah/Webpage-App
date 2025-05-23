@@ -26,15 +26,15 @@ const messages = {
     "bio": createMessages([
         "ABOUT ME",
         "👋 Hey! I'm Isaiah Aganon!",
-        "🏫 I am a 3rd year at Carleton University.",
+        "🏫 I am a 4rd year at Carleton University, class of 2027.",
         "🖥️ I am currently pursuing a Bachelors in Computer Science (Honours) degree.",
         "🧮 I minor in Mathematics and have an interest in web development!"
     ]),
     "skills": createMessages([
         "SKILLS",
-        "💻 Programming Languages: Java, JavaScript, TypeScript, C, C++, SQL",
-        "📦 Frameworks & Libraries: React, Spring Boot, Node.js, Deno, Express.js, Tailwind CSS",
-        "🛠️ Developer Tools: Git, Docker, Linux, Vim, VS Code, IntelliJ, Vercel",
+        "💻 Programming Languages: Java, JavaScript, TypeScript, SQL",
+        "📦 Frameworks & Libraries: React, Angular, Spring Boot, Node.js, Next.js, Express.js, Tailwind CSS",
+        "🛠️ Developer Tools: Git, Figma, Docker, Linux, Vim, VS Code, IntelliJ, Vercel, Maven",
     ]),
     "resume": createMessages([
         "RESUME",
@@ -85,20 +85,7 @@ const messages = {
         "🇫🇷 French Speaking App",
         "Designed and implemented a full-stack application leveraging Spring Boot to support French language learners in practicing and receiving feedback on their oral production skills.",
         "Skills: Java, Spring Boot, HTML, CSS",
-        "https://github.com/AganonIsaiah/French-Speaking-App",
-
-        // Music App
-        "🥁 Music Playlist App",
-        "Developed a dynamic full-stack music playlist application with a Handlebars.js front-end and Node.js back-end, allowing users to create, organize, listen, and manage personalized music playlists.",
-        "Skills: JavaScript, Node.js, Handlebars.js, SQLite",
-        "https://github.com/AganonIsaiah/Music-Playlist-App",
-
-        // NETWORK INFO APP
-        "🗓️ Calendar App",
-        "Designed a full-stack calendar application with React and Node.js, enabling users to manage events while displaying local time and weather data via OpenWeatherMap API.",
-        "Skills: JavaScript, Node.js, Express.js, React, CSS, PostgreSQL",
-        "https://github.com/AganonIsaiah/Calendar-App",
-        
+        "https://github.com/AganonIsaiah/French-Speaking-App",        
     ]),
 
     "info": createMessages([
