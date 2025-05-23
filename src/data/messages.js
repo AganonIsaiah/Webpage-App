@@ -26,7 +26,7 @@ const messages = {
     "bio": createMessages([
         "ABOUT ME",
         "👋 Hey! I'm Isaiah Aganon!",
-        "🏫 I am a 4rd year at Carleton University, class of 2027.",
+        "🏫 I am a 4th year @ Carleton University, class of 2027.",
         "🖥️ I am currently pursuing a Bachelors in Computer Science (Honours) degree.",
         "🧮 I minor in Mathematics and have an interest in web development!"
     ]),
@@ -77,8 +77,8 @@ const messages = {
 
         // Webpage App
         "📄 Webpage App",
-        "Created an iMessage-styled digital profile webpage with React and Node.js, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
-        "Skills: JavaScript, Node.js, React, CSS, Vercel",
+        "Created an iMessage-styled digital profile webpage with React and Next.js, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
+        "Skills: JavaScript, Next.js, React, CSS, Vercel",
         "https://github.com/AganonIsaiah/Webpage-App",
 
         // French App
