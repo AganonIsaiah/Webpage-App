@@ -44,7 +44,7 @@ const messages = {
     "experience": createMessages([
         `<b>${span.header("EXPERIENCE")}</b>`,
 
-        "💻🛠️ <b>Frontend Developer TI Risk Intern</b>",
+        "💻🛠️ <b><u>Frontend Developer TI Risk Intern</u></b>",
         `${span.company("RBC")} @ <b>Toronto, ON</b>`,
         "🗓️ May. 2025 – Present",
         `<b>Skills: </b> ${span.language("TypeScript")}, ${span.language("Angular")}, ${span.language("Tailwind CSS")}`,
@@ -54,7 +54,7 @@ const messages = {
         `Collaborated with backend and data science teams to integrate ${span.result("APIs")} and support visualization of <b>ML insights</b>, contributing to ${span.result("risk reduction strategies")}.`,
         `Created <b>automated unit</b> and <b>integration tests</b> for ${span.language("Angular")} components using ${span.language("Angular CLI")} and ${span.language("Jasmine")}, increasing <b>code coverage</b> and reducing <b>production bugs</b> by <b>${span.number("20%")}</b>.`,
 
-        "🏫💡 <b>Teaching Assistant</b>",
+        "🏫💡 <b><u>Teaching Assistant</u></b>",
         `${span.company("Carleton University")} @ <b>Ottawa, ON</b>`,
         "🗓️ Sep. 2024 – Apr. 2025",
         `<b>Skills: </b> ${span.language("JavaScript")}, ${span.language("HTML")}, ${span.language("CSS")}, ${span.language("SQLite")}, ${span.language("Node.js")}, ${span.language("Express.js")}, ${span.language("React")}`,
@@ -68,13 +68,13 @@ const messages = {
     "projects": createMessages([
         `<b>${span.header("PROJECTS")}</b>`,
 
-        "📄 <b>Webpage App</b>",
+        "📄 <b><u>Webpage App</u></b>",
         `<b>Skills: </b> ${span.language("JavaScript")}, ${span.language("Next.js")}, ${span.language("React")}, ${span.language("CSS")}, ${span.language("Vercel")}`,
         `Built an iMessage-styled interactive webpage with ${span.language("React")} and ${span.language("Next.js")} to showcase my biography, resume, experience, and projects, leveraging server-side rendering to improve SEO and load performance.`,
         `Deployed on ${span.language("Vercel")} using its serverless architecture for fast performance, automatic scaling, and seamless CI/CD integration.`,
         "🔗 https://github.com/AganonIsaiah/Webpage-App",
 
-        "🇫🇷 <b>French Speaking App</b>",
+        "🇫🇷 <b><u>French Speaking App</u></b>",
         `<b>Skills: </b> ${span.language("Java")}, ${span.language("Spring Boot")}, ${span.language("TypeScript")}, ${span.language("Angular")}, ${span.language("PostgreSQL")}, ${span.language("Ollama")}`,
         `Built a gamified French language learning app using ${span.language("Angular")} and ${span.language("Spring Boot")} for real-time AI-driven voice conversations, leveraging Ollama AI for dynamic language correction and feedback.`,
         `Integrated a ${span.language("PostgreSQL")} database to persist chat history, user profiles, and scoring data, enabling memory for the Ollama-powered chatbot.`,
