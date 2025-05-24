@@ -10,6 +10,8 @@ export default function Home() {
   const [chatHistory, setChatHistory] = useState(messages.clear);
   const [isSending, setIsSending] = useState(false);
 
+  const timeChat = 600;
+
   const handleSendMessage = () => {
     if (input.trim() && !isSending) {
       setIsSending(true);
@@ -26,7 +28,7 @@ export default function Home() {
               timestamp: new Date(Date.now() + (index + 1) * 500),
             },
           ]);
-        }, (index + 1) * 650);
+        }, (index + 1) * timeChat);
       });
 
       setInput("");
@@ -56,7 +58,7 @@ export default function Home() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-          placeholder="Write a text: (e.g., 'view all cmds')"
+          placeholder="Type a command: (e.g., 'view all cmds')"
         />
       </div>
     </div>

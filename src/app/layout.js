@@ -5,7 +5,7 @@ export const metadata = {
   title: "Isaiah's Webpage",
   description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
   icons: {
-    icon: "/en.png"
+    icon: "/images/en.png"
   },
   openGraph: {
     title: "Isaiah's Webpage",

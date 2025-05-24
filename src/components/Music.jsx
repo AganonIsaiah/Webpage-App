@@ -152,11 +152,11 @@ export default function Music() {
 
         {!showMessage && !messageShown ? (
           <div className="song-info">
-            <img src="/en.png" alt="Album Art" className="album-art" />
+            <img src="/images/church.png" alt="Album Art" className="album-art" />
             <h2>Isaiah's Mix</h2>
           </div>
         ) : (
-          <h3 className="song-title">{songs[currentSongIndex].name}</h3>
+          <h3 className="song-title">{`Track ${currentSongIndex+1}`}</h3>
         )}
 
         <div className="progress-container" onClick={handleProgressClick}>

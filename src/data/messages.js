@@ -1,16 +1,14 @@
-/*
-    - Messaging should be interactive and type based,
-    - User enters a text, the corresponding messages are outputted
-    - All messages will be displayed in individual text bubble
-        - "Send all" -  Sends everything in order: bio, resume, work experience, projects, links
-        1. "Send bio" - Simple text (strings) that describe me
-        2. "Send resume" - displays .pdf of my resume
-        3. "Send work experience" - Simple text (strings) of my experience
-        4. "Send projects" -  Simple, brief, text (strings) describing the project, followed by link and .pdf 
-        5. "Send contact info" - Simple text (strings) that link to my linkedin and github
-*/
-const resumePDF ='/assets/Resume_Isaiah_Aganon.pdf'
-const createMessages = (texts) => texts.map(text => ({ text, sender: "Isaiah Aganon"}));
+const resumePDF = '/assets/Resume_Isaiah_Aganon.pdf';
+const createMessages = (texts) => texts.map(text => ({ text, sender: "Isaiah Aganon" }));
+
+// Span helpers
+const span = {
+    language: (text) => `<span class="language">${text}</span>`,
+    number: (text) => `<span class="number">${text}</span>`,
+    result: (text) => `<span class="result">${text}</span>`,
+    company: (text) => `<span class="company">${text}</span>`,
+    header: (text) => `<span class="header">${text}</span>`
+};
 
 const messages = {
     "view all cmds": createMessages([
@@ -24,74 +22,69 @@ const messages = {
     ]),
 
     "bio": createMessages([
-        "ABOUT ME",
-        "👋 Hey! I'm Isaiah Aganon!",
-        "🏫 I am a 4th year @ Carleton University, class of 2027.",
-        "🖥️ I am currently pursuing a Bachelors in Computer Science (Honours) degree.",
-        "🧮 I minor in Mathematics and have an interest in web development!"
+        `<b>${span.header("ABOUT ME")}</b>`,
+        "👋 Hey! I'm <b>Isaiah Aganon</b>!",
+        "🏫 I am a <b>3rd year</b> @ <b> Carleton University</b>, class of <b>2027</b>.",
+        "🖥️ I am currently pursuing a Bachelors in <b>Computer Science (Honours) </b> degree.",
+        "🧮 I minor in <b>Mathematics</b> and have an interest in <b>Web Development</b>!"
     ]),
+
     "skills": createMessages([
-        "SKILLS",
-        "💻 Programming Languages: Java, JavaScript, TypeScript, SQL",
-        "📦 Frameworks & Libraries: React, Angular, Spring Boot, Node.js, Next.js, Express.js, Tailwind CSS",
-        "🛠️ Developer Tools: Git, Figma, Docker, Linux, Vim, VS Code, IntelliJ, Vercel, Maven",
+        `<b>${span.header("SKILLS")}</b>`,
+        `💻 <b>Programming Languages: </b> Java, JavaScript, TypeScript, SQL `,
+        `📦 <b>Frameworks & Libraries: </b> React, Angular, Spring Boot, Node.js, Next.js, Express.js, Tailwind CSS`,
+        `🛠️ <b>Developer Tools: </b> Git, Figma, Docker, Linux, AWS, Vim, VS Code, IntelliJ, Vercel, Maven`,
     ]),
+
     "resume": createMessages([
-        "RESUME",
-        `<iframe src="${resumePDF}" width="100%" height="100%" style="border:none;"></iframe>`
+        `<b>${span.header("RESUME")}</b>`,
+        `<iframe src="${resumePDF}"></iframe>`
     ]),
+
     "experience": createMessages([
-        "EXPERIENCE",
+        `<b>${span.header("EXPERIENCE")}</b>`,
 
-        // Job 1
-        "💻🛠️ Software Developer Intern",
-        "RBC",
-        "🗓️ May. 2025 -- Dec. 2025",
-        "Skills: ",
+        "💻🛠️ <b>Frontend Developer TI Risk Intern</b>",
+        `${span.company("RBC")} @ <b>Toronto, ON</b>`,
+        "🗓️ May. 2025 – Present",
+        `<b>Skills: </b> ${span.language("TypeScript")}, ${span.language("Angular")}, ${span.language("Tailwind CSS")}`,
 
-        "Incoming intern.",
-        
-        // Job 2
-        "🏫💡 Teaching Assistant (Fundamentals of Web Applications)",
-        "Carleton University",
-        "🗓️ Jan. 2025 -- Apr. 2025",
-        "Skills: JavaScript, HTML, CSS, Node.js, Express.js, React, SQLite",
+        `Developed ${span.number("6+ core UI Components")} for an ${span.result("Operational Risk Reporting Dashboard")} used by <b>senior leadership</b> and <b>regulators</b>.`,
+        `Built dynamic, data-driven ${span.language("Angular")} components to visualize ${span.number("14 KPIs")} across risk domains, enhancing clarity and accessibility of insights.`,
+        `Collaborated with backend and data science teams to integrate ${span.result("APIs")} and support visualization of <b>ML insights</b>, contributing to ${span.result("risk reduction strategies")}.`,
+        `Created <b>automated unit</b> and <b>integration tests</b> for ${span.language("Angular")} components using ${span.language("Angular CLI")} and ${span.language("Jasmine")}, increasing <b>code coverage</b> and reducing <b>production bugs</b> by <b>${span.number("20%")}</b>.`,
 
-        "Delivered weekly tutorials for a class section of 33 students, covering web development using HTML, CSS, JavaScript, SQLite, and Node.js for back-end development.",
-        "Guided students through hands-on projects utilizing Node.js, Express.js, and React, emphasizing RESTful APIs, component-based architecture, and state management.",
-        "Taught debugging techniques in Node.js and React applications, including using browser DevTools and React DevTools for performance tuning and troubleshooting.",
-       
-        // Job 3
-        "📚👨‍🏫 Teaching Assistant (Fundamentals of Web Applications)",
-        "Carleton University",
-        "🗓️ Sep. 2024 -- Dec. 2024",
-        "Skills: JavaScript, TypeScript, HTML, CSS, Deno, Deno Fresh, Tailwind CSS, SQLite",
+        "🏫💡 <b>Teaching Assistant</b>",
+        `${span.company("Carleton University")} @ <b>Ottawa, ON</b>`,
+        "🗓️ Sep. 2024 – Apr. 2025",
+        `<b>Skills: </b> ${span.language("JavaScript")}, ${span.language("HTML")}, ${span.language("CSS")}, ${span.language("SQLite")}, ${span.language("Node.js")}, ${span.language("Express.js")}, ${span.language("React")}`,
 
-        "Conducted weekly tutorials for a class section of 47 students, focusing on web development fundamentals, including HTML, CSS, JavaScript, SQLite, and Deno for back-end development.",
-        "Introduced students to Deno’s Fresh framework, TypeScript, and Tailwind CSS, guiding them through the process of building a full-stack web application project, integrating front-end and back-end components.",
-        "Assisted students with using Chrome DevTools to inspect elements, debug JavaScript errors, and analyze network requests for failed API calls, ensuring faster resolution to programming challenges.",
+        `Delivered weekly tutorials to a class section of ${span.number("33 students")}, covering the fundamentals of web development with ${span.language("JavaScript")}, ${span.language("HTML")}, ${span.language("CSS")}, ${span.language("SQLite")}, and ${span.language("Node.js")}.`,
+        `Guided students through <b>hands-on projects</b> using ${span.language("Node.js")}, ${span.language("Express.js")}, and ${span.language("React")}, emphasizing <b>RESTful APIs</b>, <b>component-based architecture</b>, and <b>state management</b>.`,
+        `Hosted <b>weekly office hours</b> and <b>collaborative study sessions</b>, contributing to <b>${span.number("85%")}</b> of students in the section earning an ${span.result("A or higher")}.`,
+        `Efficiently graded ${span.number("150+")} <b>assignments</b> and <b>tests</b> each term, delivering clear, actionable feedback that contributed to a <b>${span.number("30%")}</b> ${span.result("improvement")} in students' performance on later projects.`
     ]),
 
     "projects": createMessages([
-        "PROJECTS",
+        `<b>${span.header("PROJECTS")}</b>`,
 
-        // Webpage App
-        "📄 Webpage App",
-        "Created an iMessage-styled digital profile webpage with React and Next.js, displaying interactive, command-based messages that showcase my biography, resume, work experience, and projects.",
-        "Skills: JavaScript, Next.js, React, CSS, Vercel",
-        "https://github.com/AganonIsaiah/Webpage-App",
+        "📄 <b>Webpage App</b>",
+        `<b>Skills: </b> ${span.language("JavaScript")}, ${span.language("Next.js")}, ${span.language("React")}, ${span.language("CSS")}, ${span.language("Vercel")}`,
+        `Built an iMessage-styled interactive webpage with ${span.language("React")} and ${span.language("Next.js")} to showcase my biography, resume, experience, and projects, leveraging server-side rendering to improve SEO and load performance.`,
+        `Deployed on ${span.language("Vercel")} using its serverless architecture for fast performance, automatic scaling, and seamless CI/CD integration.`,
+        "🔗 https://github.com/AganonIsaiah/Webpage-App",
 
-        // French App
-        "🇫🇷 French Speaking App",
-        "Designed and implemented a full-stack application leveraging Spring Boot to support French language learners in practicing and receiving feedback on their oral production skills.",
-        "Skills: Java, Spring Boot, HTML, CSS",
-        "https://github.com/AganonIsaiah/French-Speaking-App",        
+        "🇫🇷 <b>French Speaking App</b>",
+        `<b>Skills: </b> ${span.language("Java")}, ${span.language("Spring Boot")}, ${span.language("TypeScript")}, ${span.language("Angular")}, ${span.language("PostgreSQL")}, ${span.language("Ollama")}`,
+        `Built a gamified French language learning app using ${span.language("Angular")} and ${span.language("Spring Boot")} for real-time AI-driven voice conversations, leveraging Ollama AI for dynamic language correction and feedback.`,
+        `Integrated a ${span.language("PostgreSQL")} database to persist chat history, user profiles, and scoring data, enabling memory for the Ollama-powered chatbot.`,
+        "🔗 https://github.com/AganonIsaiah/French-Speaking-App",
     ]),
 
     "info": createMessages([
-        "CONTACT INFORMATION",
-        "☎️ Phone Number: +1 (365) 880-9158",
-        "📤 Email: IsaiahAganon@cmail.carleton.ca",
+        `<b>${span.header("CONTACT INFORMATION")}</b>`,
+        "☎️ <b>Phone Number:</b> +1 (365) 880-9158",
+        "📤 <b>Email:</b> IsaiahAganon@cmail.carleton.ca",
         "🖥️ GitHub: https://github.com/AganonIsaiah",
         "💼 LinkedIn: https://www.linkedin.com/in/isaiah-aganon"
     ]),
@@ -108,10 +101,11 @@ messages["send all"] = [
     ...messages["projects"],
     ...messages["info"],
     ...messages["resume"],
-]
+];
 
 messages["default"] = [
     ...createMessages(["Hey!"]),
     ...messages["view all cmds"]
-]
+];
+
 export default messages;

@@ -2,19 +2,20 @@ import React from "react";
 
 const Message = ({ message }) => {
   const isReceived = message.sender !== "Isaiah Aganon";
-  const isPDF = message.text.includes("<iframe"); 
+  const isPDF = message.text.includes("<iframe");
 
   const renderMessageContent = () => {
-    if (isPDF || message.text.includes("<a")) {
+    if (/<\/?(b|strong|span|iframe|a)[^>]*>/i.test(message.text)) {
       return <div dangerouslySetInnerHTML={{ __html: message.text }} />;
     }
+
     return renderTextWithLinks(message.text);
   };
 
   const renderTextWithLinks = (text) => {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     const emailRegex = /([^\s]+@[^\s]+\.[^\s]+)/g;
-    
+
     return text.split(/(https?:\/\/[^\s]+)|([^\s]+@[^\s]+\.[^\s]+)/g).map((part, index) =>
       urlRegex.test(part) ? (
         <a key={index} href={part} target="_blank" rel="noopener noreferrer" style={{ color: '#0b93f6', textDecoration: 'underline' }}>
