@@ -133,6 +133,7 @@ export default function Music() {
   return (
     <div className="music-container">
       <div className="music-background"></div>
+      
       <div className="music-player">
         <div className="lock-info">
           <p className="date">{time.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
