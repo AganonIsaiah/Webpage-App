@@ -58,7 +58,7 @@ export default function Home() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-          placeholder="Type a command: (e.g., 'view all cmds')"
+          placeholder="Enter a text..."
         />
       </div>
     </div>
