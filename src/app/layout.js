@@ -1,5 +1,4 @@
 import { Analytics } from '@vercel/analytics/react';
-import Head from 'next/head';
 
 export const metadata = {
   title: "Isaiah's Webpage",
@@ -25,11 +24,16 @@ export const metadata = {
   },
 };
 
+// Add this separate viewport export
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
-      <Head>
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -51,8 +55,8 @@ export default function RootLayout({ children }) {
             }
           `}}
         />
-      </Head>
-      <body >
+      </head>
+      <body>
         {children}
         <Analytics />
       </body>

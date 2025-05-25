@@ -25,14 +25,14 @@ body {
   margin: 0px;
   padding: 0px;
 
-
-  background-color: rgb(139, 21, 21);
+  background-color: gray;
+    /* background-color: rgb(139, 21, 21); */
 }
 
 .music-background {
   position: absolute;
   inset: 0;
-  background: url("/images/wsg.png") center/cover no-repeat;
+  background: url("/images/church.png") center/cover no-repeat;
   filter: blur(120px) brightness(1.1);
   opacity: 1.0;
 }
