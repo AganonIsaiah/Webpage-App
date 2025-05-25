@@ -20,18 +20,20 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-color: #1c1c1e;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0px;
   padding: 0px;
+
+
+  background-color: rgb(139, 21, 21);
 }
 
 .music-background {
   position: absolute;
   inset: 0;
   background: url("/images/wsg.png") center/cover no-repeat;
-  filter: blur(90px) brightness(1.3);
+  filter: blur(120px) brightness(1.1);
   opacity: 1.0;
 }
 
