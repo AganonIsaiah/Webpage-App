@@ -95,11 +95,28 @@ const messages = {
 };
 
 messages["send all"] = [
+    // Bio section
+    { text: "bio", sender: "User" },
     ...messages["bio"],
+    
+    // Skills section
+    { text: "skills", sender: "User" },
     ...messages["skills"],
+    
+    // Experience section
+    { text: "experience", sender: "User" },
     ...messages["experience"],
+    
+    // Projects section
+    { text: "projects", sender: "User" },
     ...messages["projects"],
+    
+    // Info section
+    { text: "info", sender: "User" },
     ...messages["info"],
+    
+    // Resume section
+    { text: "resume", sender: "User" },
     ...messages["resume"],
 ];
 

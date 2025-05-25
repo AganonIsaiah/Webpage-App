@@ -31,7 +31,7 @@ body {
   position: absolute;
   inset: 0;
   background: url("/images/wsg.png") center/cover no-repeat;
-  filter: blur(100px) brightness(1.3);
+  filter: blur(90px) brightness(1.3);
   opacity: 1.0;
 }
 
