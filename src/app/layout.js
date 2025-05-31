@@ -1,13 +1,13 @@
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
-  title: "Isaiah Aganon | Isaiah's Webpage",
+  title: "Isaiah's Webpage",
   description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
   icons: {
     icon: "/images/en.png"
   },
   openGraph: {
-    title: "Isaiah Aganon | Isaiah's Webpage",
+    title: "Isaiah's Webpage",
     description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
     url: "https://isaiahaganon.vercel.app/",
     siteName: "Isaiah Aganon Portfolio",
@@ -34,9 +34,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Isaiah Aganon | Isaiah's Webpage</title>
-        <meta name="description" content="Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University." />
-        <meta name="keywords" content="Isaiah Aganon, Isaiah, Aganon, Carleton University, Computer Science, Portfolio" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -60,9 +57,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <header>
-          <h1>Isaiah Aganon</h1>
-        </header>
         {children}
         <Analytics />
       </body>
