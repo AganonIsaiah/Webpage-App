@@ -1,13 +1,13 @@
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
-  title: "Isaiah's Webpage",
+  title: "Isaiah Aganon",
   description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
   icons: {
     icon: "/images/en.png"
   },
   openGraph: {
-    title: "Isaiah's Webpage",
+    title: "Isaiah Aganon",
     description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
     url: "https://isaiahaganon.vercel.app/",
     siteName: "Isaiah Aganon Portfolio",
@@ -24,7 +24,6 @@ export const metadata = {
   },
 };
 
-// Add this separate viewport export
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
