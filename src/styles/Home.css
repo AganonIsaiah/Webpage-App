@@ -233,8 +233,9 @@ input::placeholder {
 
 
 a {
-    color: #0b93f6 !important;
+    color: #1ba0ff !important;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
