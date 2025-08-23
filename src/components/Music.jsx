@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Play, Pause, SkipBack, SkipForward } from "lucide-react";
 import { useRouter } from "next/navigation";
 import '@/styles/Music.css'
-import { songs } from "@/data/songs";
+import { playlist2 } from "@/data/songs";
 
 export default function Music() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -21,6 +21,8 @@ export default function Music() {
   const audioRef = useRef(null);
   const progressIntervalRef = useRef(null);
   const messageTimerRef = useRef(null);
+
+  const songs = playlist2;
 
   useEffect(() => {
     audioRef.current = new Audio(songs[currentSongIndex].file);
@@ -132,16 +134,14 @@ export default function Music() {
 
   return (
     <div className="music-container">
-      <div className="music-background"></div>
-      
-      <div className="music-player">
-        <div className="lock-info">
+      <div className="music-player flex flex-col gap-1">
+        <div className="text-center mb-2">
           <p className="date">{time.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
           <p className="time">{time.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false })}</p>
         </div>
 
         {showMessage && (
-          <div className="ios-message-bubble" onClick={handleMessageClick}>
+          <div className="ios-message-bubble my-2 " onClick={handleMessageClick}>
             <div className="ios-message-header">
               <div className="ios-message-sender">Isaiah Aganon</div>
               <div className="ios-message-time">now</div>
@@ -151,16 +151,17 @@ export default function Music() {
         )}
 
         {!showMessage && !messageShown ? (
-          <div className="song-info">
-            <img src="/images/church.png" alt="Album Art" className="album-art" />
-            <h2>Isaiah's Mix</h2>
+          <div className="song-info flex flex-col justify-center items-center gap-4">
+            <img src="/images/cm.png" alt="Album Art" className="album-art" 
+           />
+            <h2 className="mx-auto">Isaiah's Mix</h2>
           </div>
         ) : (
-          <h3 className="song-title">{`Track ${currentSongIndex+1}`}</h3>
+          <h3 className="song-title font-semibold text-[18px] mt-1">{`Track ${currentSongIndex+1}`}</h3>
         )}
 
         <div className="progress-container" onClick={handleProgressClick}>
-          <div className="progress-bar">
+          <div className="progress-bar mt-3 mb-4">
             <div className="progress" style={{ width: `${progress}%` }}></div>
           </div>
           <div className="progress-time">

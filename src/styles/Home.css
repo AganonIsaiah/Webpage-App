@@ -79,8 +79,8 @@ body {
 }
 
 .chat-bubble {
-    max-width: 70%;
-    padding: 0.4rem 0.7rem;
+    max-width: 100%;
+    padding: 0.5rem 0.7rem;
     border-radius: 18px;
     position: relative;
     word-wrap: break-word;
@@ -93,35 +93,59 @@ body {
 
  
 
+/* Enhanced span styling */
 .chat-bubble .language {
-  color: #f0bb0d;
-  font-weight: 700;
+    color: #ffd60a;
+    font-weight: 700;
+    background-color: rgba(255, 214, 10, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
 }
 
 .chat-bubble .number {
-  color: #ff7043; 
-  font-weight: 700;
+    color: #ff6b35;
+    font-weight: 700;
+    background-color: rgba(255, 107, 53, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
 .chat-bubble .result {
-  color: #ff7043; 
-  /* font-style: italic; */
-  font-weight: 700;
-}
-
-.chat-bubble b {
-  font-weight: 700;
+    color: #32d74b;
+    font-weight: 700;
+    background-color: rgba(50, 215, 75, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
 }
 
 .chat-bubble .company {
-  color: #0b93f6;       
-  font-weight: 900;      
-     
+    color: #0b93f6;
+    font-weight: 900;
+    font-size: 1.05em;
 }
 
 .chat-bubble .header {
-    font-weight: 1800;
+    font-weight: 800;
     font-style: italic;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.chat-bubble .accent {
+    color: #af52de;
+    font-weight: 600;
+}
+
+.chat-bubble .highlight {
+    color: #ffd60a;
+    font-weight: 600;
+}
+
+.chat-bubble .subtle {
+    color: #8e8e93;
+    font-size: 0.9em;
+    font-weight: 400;
 }
 
 
@@ -205,6 +229,12 @@ input:focus {
 
 input::placeholder {
     color: #8e8e93;
+}
+
+
+a {
+    color: #0b93f6 !important;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
