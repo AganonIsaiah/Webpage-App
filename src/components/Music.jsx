@@ -136,7 +136,7 @@ export default function Music() {
     <div className="music-container">
       <div className="music-player flex flex-col gap-1">
         <div className="text-center mb-2">
-          <p className="date">{time.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
+          <p className="date !ml-2">{time.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
           <p className="time">{time.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false })}</p>
         </div>
 
