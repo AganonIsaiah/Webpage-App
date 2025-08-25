@@ -136,7 +136,7 @@ export default function Music() {
     <div className="music-container">
       <div className="music-player flex flex-col gap-1">
         <div className="text-center mb-2">
-          <p className="date !ml-2">{time.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
+          <p className="date">{time.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
           <p className="time">{time.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false })}</p>
         </div>
 
@@ -152,16 +152,16 @@ export default function Music() {
 
         {!showMessage && !messageShown ? (
           <div className="song-info flex flex-col justify-center items-center gap-4">
-            <img src="/images/cm.png" alt="Album Art" className="album-art" 
+            <img src="/images/tat.jpg" alt="Album Art" className="album-art" 
            />
-            <h2 className="mx-auto">Isaiah's Mix</h2>
+            <h2>Isaiah's Mix</h2>
           </div>
         ) : (
           <h3 className="song-title font-semibold text-[18px] mt-1">{`Track ${currentSongIndex+1}`}</h3>
         )}
 
         <div className="progress-container" onClick={handleProgressClick}>
-          <div className="progress-bar mt-3 mb-4">
+          <div className="progress-bar mt-3 mb-4 !shadow-md">
             <div className="progress" style={{ width: `${progress}%` }}></div>
           </div>
           <div className="progress-time">

@@ -79,11 +79,12 @@ body {
 }
 
 .chat-bubble {
-    max-width: 100%;
+    max-width: 85%;
     padding: 0.5rem 0.7rem;
     border-radius: 18px;
     position: relative;
     word-wrap: break-word;
+    
 }
 
 .chat-bubble p {

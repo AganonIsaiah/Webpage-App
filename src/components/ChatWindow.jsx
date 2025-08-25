@@ -54,7 +54,7 @@ const ChatWindow = ({ messages }) => {
   const groupedMessages = groupMessagesByDate(messages);
   
   return (
-    <div className="chat-window">
+    <div className="chat-window ">
       {groupedMessages.map((item, index) => (
         <div key={index} className="message-group">
           {item.type === 'timestamp' ? (

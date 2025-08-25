@@ -8,13 +8,18 @@ body {
   width: 100%;
   overflow: hidden;
   /* background: #cf7272; */
-  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  /* background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); */
   /* background: linear-gradient(135deg, #cf7272 0%, #e85a4f 100%); */
   /* background: linear-gradient(135deg, #cf7272 0%, rgba(207, 114, 114, 0.6) 100%); */
-  background: linear-gradient(135deg, #232526 0%, #414345 100%);
-  background: linear-gradient(135deg, #4568DC 0%, #B06AB3 100%);
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-}
+  /* background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  background: linear-gradient(135deg, #4568DC 0%, #B06AB3 100%); */
+  /* background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); */
+  
+  /* background: linear-gradient(135deg, #daa520 0%, #dc143c 100%); */
+  /* background: linear-gradient(135deg, #8a8a8a 0%, #707070 50%, #5a5a5a 100%); */
+  
+   background: linear-gradient(135deg, #ffffff 0%, #f4f4f4 50%, #eeeeee 100%);
+  }
 
 *,
 *::before,
@@ -32,10 +37,10 @@ body {
   height: 100dvh;
   height: -webkit-fill-available;
   width: 100vw;
-  color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0px;
   padding: 0px;
+  color: #303031;
 
 }
 
@@ -44,6 +49,7 @@ body {
   flex-direction: column;
   align-items: center;
 
+  
   position: relative;
   width: 100%;
   max-width: 25rem;
@@ -55,36 +61,32 @@ body {
   font-size: 5rem;
   font-weight: 600;
   letter-spacing: -2px;
-  color: white;
   margin: -1rem;
 }
 
 .date {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .album-art {
   width: 100%;
   max-width: 80%;
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
 .song-info h2 {
   font-size: 1.4rem;
   font-weight: 500;
-  color: white;
 }
 
 .song-info p {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .progress-bar {
   width: 21rem;
   height: 4px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(100, 98, 98, 0.3);
   border-radius: 2px;
 }
 
@@ -104,7 +106,6 @@ body {
 .icon {
   width: 2rem;
   height: 2rem;
-  color: white;
   cursor: pointer;
 }
 
