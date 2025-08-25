@@ -21,6 +21,7 @@ const messages = {
         '🚀 Type <b>"projects"</b> to view all of my projects',
         '📞 Type <b>"info"</b> to view my contact information',
         '📄 Type <b>"resume"</b> to view my resume',
+        '👋 Type <b>"bye"</b> to exit'
     ]),
 
     "bio": createMessages([
@@ -100,7 +101,8 @@ const messages = {
 
     "clear": createMessages([
         "Welcome to my webpage!"
-    ])
+    ]),
+
 };
 
 messages["send all"] = [

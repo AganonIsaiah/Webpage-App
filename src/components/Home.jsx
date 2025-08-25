@@ -17,6 +17,12 @@ export default function Home() {
       setIsSending(true);
 
       setChatHistory((prev) => [...prev, { text: input, sender: "User" }]);
+
+      if (input.trim() === 'bye') {
+        window.location.href = "/";
+        return;
+      }
+
       const newMsg = messages[input.trim().toLowerCase()] || messages.default;
 
       newMsg.forEach((message, index) => {

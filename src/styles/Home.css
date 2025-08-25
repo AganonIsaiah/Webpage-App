@@ -236,6 +236,11 @@ a {
     color: #1ba0ff !important;
     font-weight: 700;
     text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0a66c2 !important;
 }
 
 @media (max-width: 768px) {
