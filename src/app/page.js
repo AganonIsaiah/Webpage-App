@@ -1,5 +1,5 @@
-import Music from "@/components/Music";
+import { redirect } from "next/navigation";
 
 export default function Page() {
-    return <Music />
+    redirect('/v2/desktop');
 }
