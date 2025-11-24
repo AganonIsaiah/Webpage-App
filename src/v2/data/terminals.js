@@ -1,9 +1,7 @@
 export const introTerminal = {
-    x: "left-10",
-    y: "top-15",
-    z: "z-10",
     dir: "intro",
     cmd: "$ cat intro.txt",
+    position: { top: 50, left: 50 },
     content: [
         {
             type: "output",
@@ -41,10 +39,9 @@ export const introTerminal = {
 };
 
 export const contactTerminal = {
-    x: "left-15",
-    y: "top-95",
     dir: "contact",
     cmd: "$ cat contact.sh",
+    position: { top: 280, left: 520 },
     content: [
         {
             type: "comment",
@@ -77,10 +74,9 @@ export const contactTerminal = {
 };
 
 export const experienceTerminal = {
-    x: "right-50",
-    y: "top-75",
     dir: "experience",
     cmd: "$ search --experience 'Isaiah Aganon'",
+    position: { top: 350, left: 60 },
     content: [
         {
             type: "output",
@@ -160,10 +156,9 @@ export const experienceTerminal = {
 };
 
 export const projectTerminal = {
-    x: "left-120",
-    y: "bottom-55",
     dir: "project",
     cmd: "$ git log --projects --oneline",
+    position: { top: 350, left: 955 },
     content: [
         {
             type: "output",
@@ -207,10 +202,9 @@ export const projectTerminal = {
 };
 
 export const navTerminal = {
-    x: "right-30",
-    y: "top-17",
     dir: "navigation",
     cmd: "$ ls -la navigation/",
+    position: { top: 40, left: 650 },
     content: [
         {
             type: "output",

@@ -57,7 +57,7 @@ export default function SystemBar({ activeWorkspace, setActiveWorkspace }) {
 
             <span className="pblue">{weekday} | {formatTime} | {formatDate}</span>
 
-            <div className="flex gap-3 items-center justify-center text-sm pgray">
+            <div className="hidden md:flex gap-3 items-center justify-center text-sm pgray">
                 <div className="flex items-center gap-1">
                     <span className="text-xs !mt-1">CPU</span>
                     <Bar value={cpu} color="bg-[#7aa2f7]" />
