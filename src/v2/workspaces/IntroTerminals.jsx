@@ -3,7 +3,7 @@
 import Terminal from "../components/Terminal"
 import { introTerminal, contactTerminal, navTerminal, experienceTerminal, projectTerminal } from "../data/terminals"
 
-export default function Workspace1() {
+export default function IntroTerminals() {
 
     return (
         <div>

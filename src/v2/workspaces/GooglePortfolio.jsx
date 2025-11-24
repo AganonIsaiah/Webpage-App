@@ -13,10 +13,9 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 
 import '@/v2/styles/Desktop.css'
 
-export default function Workspace5() {
+export default function GooglePortfolio() {
 
     const [searchInput, setSearchInput] = useState("Isaiah Aganon Webpage V1");
-
     const router = useRouter();
 
     function Webpage({ icon, host, link, title, desc, route }) {
@@ -135,7 +134,7 @@ export default function Workspace5() {
                             />
                         </div>
 
-                        <span className="!mt-4 !ml-4 flex gap-4 cursor-not-allowed text-sm">
+                        <span className="!mt-3 !ml-4 flex gap-4 cursor-not-allowed text-sm">
                             <p className="!cursor-pointer text-black underline">All</p>
                             <p>Shopping</p>
                             <p>Images</p>
