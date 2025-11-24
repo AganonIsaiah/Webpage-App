@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
-  title: "Isaiah's Webpage",
+  title: "isaiah@portfolio ~ $",
   description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
   icons: {
     icon: "/images/en.png"
