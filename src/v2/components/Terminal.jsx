@@ -1,10 +1,10 @@
 import "@/v2/styles/Desktop.css";
 
 export default function Terminal({ config }) {
-    const { x, y, dir, cmd, content } = config;
+    const { x, y, z, dir, cmd, content } = config;
 
     return (
-        <div className={`terminal !pb-6 flex flex-col absolute ${x} ${y} opacity-89`}>
+        <div className={`terminal !pb-6 flex flex-col absolute ${x} ${y} ${z} opacity-89`}>
             <div className="terminal-header text-xs">
                 <span>isaiah@portfolio: ~/{dir}</span>
 

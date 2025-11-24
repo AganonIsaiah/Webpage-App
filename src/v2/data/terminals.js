@@ -1,6 +1,7 @@
 export const introTerminal = {
     x: "left-10",
     y: "top-15",
+    z: "z-10",
     dir: "intro",
     cmd: "$ cat intro.txt",
     content: [
@@ -121,7 +122,7 @@ export const experienceTerminal = {
             type: "output",
             segments: [
                 { text: "Developed features for internal web applications at RBC.", className: "!mt-2 !ml-4" },
-           
+
             ]
         },
         {
@@ -159,7 +160,7 @@ export const experienceTerminal = {
 };
 
 export const projectTerminal = {
-    x: "left-40",
+    x: "left-120",
     y: "bottom-55",
     dir: "project",
     cmd: "$ git log --projects --oneline",
@@ -167,9 +168,41 @@ export const projectTerminal = {
         {
             type: "output",
             segments: [
-                { text: "" }
+                { text: "French Speaking App", className: "pblue" },
+                { text: "\nCreated an AI-powered conversation app for French Speaking with Angular and Spring Boot." },
+                { text: "\nGitHub", className: "paqua", link: "https://github.com/AganonIsaiah/French-Speaking-App" },
+                { text: "•", className: "!mx-2" },
+                { text: "Webpage", className: "paqua", link: "https://francaispro.vercel.app/" }
             ]
-        }
+        },
+        {
+            type: "output",
+            segments: [
+                { text: "Stock Price Cloud Data Pipeline/Dashboard", className: "pblue" },
+                { text: "\nCreated a data pipeline and dashboard for real-time stock prices using FastAPI and React." },
+                { text: "\nGitHub", className: "paqua", link: "https://github.com/AganonIsaiah/Cloud-Data-Dashboard" },
+                { text: "•", className: "!mx-2" },
+                { text: "Webpage", className: "paqua", link: "https://cloud-data-dashboard.vercel.app/" }
+            ]
+        },
+        {
+            type: "output",
+            segments: [
+                { text: "Portfolio", className: "pblue" },
+                { text: "\nCreated a portfolio with React." },
+                { text: "\nGitHub", className: "paqua", link: "https://github.com/AganonIsaiah/Webpage-App" },
+                { text: "•", className: "!mx-2" },
+                { text: "Webpage", className: "paqua", link: "https://isaiahaganon.vercel.app/" }
+            ]
+        },
+        {
+            type: "output",
+            segments: [
+                { text: "C++ Insulin Pump Machine", className: "pblue" },
+                { text: "\nCreated a mock insulin pump machine with C++ and Qt." },
+                { text: "\nGitHub", className: "paqua", link: "https://github.com/AganonIsaiah/Team9-GroupProject-COMP3004" }
+            ]
+        },
     ]
 };
 
@@ -189,9 +222,10 @@ export const navTerminal = {
         {
             type: "output",
             segments: [
-                { text: "Work Experience - Workspace 2\n" },
-                { text: "Projects - Workspace 3\n" },
-                { text: "About/Skills - Workspace 4\n" }
+                { text: "About/Skills - Workspace 2\n" }, // Blog styled black webpage infinite scrolling
+                { text: "Work Experience - Workspace 3\n" }, // Chat gpt styled webpage
+                { text: "Projects - Workspace 4\n" }, // Spotify styled webpage
+                { text: "View Portfolio Webpage V1 - Workspace 5" } // Basic Google Clone
             ]
         }
     ]

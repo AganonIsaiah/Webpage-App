@@ -164,7 +164,7 @@ export default function Music() {
           <div className="progress-bar mt-3 mb-4 !shadow-md">
             <div className="progress" style={{ width: `${progress}%` }}></div>
           </div>
-          <div className="progress-time">
+          <div className="progress-time !mt-4">
             <span>{formatTime(currentTime)}</span> / <span>{formatTime(duration)}</span>
           </div>
         </div>
