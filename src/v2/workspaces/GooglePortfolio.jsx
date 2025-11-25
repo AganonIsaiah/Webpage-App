@@ -14,12 +14,10 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import '@/v2/styles/Desktop.css'
 
 export default function GooglePortfolio() {
-
     const [searchInput, setSearchInput] = useState("Isaiah Aganon Webpage V1");
-    const router = useRouter();
 
     function Webpage({ icon, host, link, title, desc, route }) {
-
+        const router = useRouter();
         const handleClick = () => {
             if (route?.startsWith("http")) {
                 window.open(route, "_blank", "noopener noreferrer");
@@ -145,7 +143,7 @@ export default function GooglePortfolio() {
                 </div>
             </section>
 
-            <article className="flex flex-col gap-8 !mt-6 !mx-38">
+            <article className="flex flex-col gap-6 !mt-6 !mx-38">
                 <Webpage
                     icon="/images/en.png"
                     host="Vercel"
@@ -158,19 +156,19 @@ export default function GooglePortfolio() {
                 <Webpage
                     icon="/images/linkedin.svg"
                     host="LinkedIn • Isaiah Aganon"
-                    link="310+ followers"
+                    link="https://www.linkedin.com/in/isaiah-aganon/"
                     title="Isaiah Aganon - Software Developer Co-op @ RBC"
                     desc="Fourth Year Computer Science Major at Carleton University."
                     route="https://www.linkedin.com/in/isaiah-aganon/"
                 />
 
-                <Webpage 
+                <Webpage
                     icon="/images/github.svg"
                     host="GitHub"
                     link="https://github.com > AganonIsaiah"
                     title="AganonIsaiah"
-                    desc="Software Developer | Building with React, Angular, and FastAPI"
-                    route="https://github.com/AganonIsaiah"                
+                    desc="Software Developer - Building with React, Angular, and FastAPI"
+                    route="https://github.com/AganonIsaiah"
                 />
             </article>
         </div>
