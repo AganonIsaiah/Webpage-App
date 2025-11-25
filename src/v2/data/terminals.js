@@ -76,7 +76,7 @@ export const contactTerminal = {
 export const experienceTerminal = {
     dir: "experience",
     cmd: "$ search --experience 'Isaiah Aganon'",
-    position: { top: 350, left: 60 },
+    position: { top: 325, left: 60 },
     content: [
         {
             type: "output",
@@ -163,8 +163,8 @@ export const projectTerminal = {
         {
             type: "output",
             segments: [
-                { text: "French Speaking App", className: "pblue" },
-                { text: "\nCreated an AI-powered conversation app for French Speaking with Angular and Spring Boot." },
+                { text: "AI French Conversational Tutor", className: "pblue" },
+                { text: "\nCreated an AI-powered conversation app for French learning with Angular and Spring Boot." },
                 { text: "\nGitHub", className: "paqua", link: "https://github.com/AganonIsaiah/French-Speaking-App" },
                 { text: "•", className: "!mx-2" },
                 { text: "Webpage", className: "paqua", link: "https://francaispro.vercel.app/" }
@@ -174,7 +174,7 @@ export const projectTerminal = {
             type: "output",
             segments: [
                 { text: "Stock Price Cloud Data Pipeline/Dashboard", className: "pblue" },
-                { text: "\nCreated a data pipeline and dashboard for real-time stock prices using FastAPI and React." },
+                { text: "\nCreated a data pipeline and dashboard for real-time stock prices using Kafka, FastAPI, and React." },
                 { text: "\nGitHub", className: "paqua", link: "https://github.com/AganonIsaiah/Cloud-Data-Dashboard" },
                 { text: "•", className: "!mx-2" },
                 { text: "Webpage", className: "paqua", link: "https://cloud-data-dashboard.vercel.app/" }

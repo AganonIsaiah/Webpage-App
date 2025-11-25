@@ -119,3 +119,11 @@ body {
         opacity: 0;
     }
 }
+
+.discord-links {
+    @apply flex items-center text-left !p-1 !w-full rounded-md !text-base cursor-pointer hover:text-white hover:bg-[#35373c];
+}
+
+.discord-links.active {
+    @apply bg-[#404249] text-white;
+}
