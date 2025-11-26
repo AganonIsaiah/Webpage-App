@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import "@/v2/styles/Desktop.css";
 
 let globalZIndex = 1;
@@ -11,9 +11,8 @@ export default function Terminal({ config, stackedIndex, stacked }) {
   const [zIndex, setZIndex] = useState(1);
   const offset = useRef({ x: 0, y: 0 });
 
-  // Override position for stacked layout
   const computedPosition = stacked
-    ? { top: stackedIndex * 250 + 20, left: 20 } // stack vertically with spacing
+    ? { top: stackedIndex * 250 + 20, left: 20 } 
     : position;
 
   const handleMouseDown = (e) => {

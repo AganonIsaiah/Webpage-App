@@ -7,6 +7,8 @@ import SystemBar from '../components/SystemBar';
 import IntroTerminals from '../workspaces/IntroTerminals';
 import GooglePortfolio from '../workspaces/GooglePortfolio';
 import DiscordExperience from '../workspaces/DiscordExperience';
+import BlogBio from '../workspaces/BlogBio';
+import SpotifyProjects from '../workspaces/SpotifyProjects';
 
 /**
  * Workspaces (2-5)
@@ -30,7 +32,9 @@ export default function Desktop() {
             </div>
 
             <div id="ws2" className={`workspace ${activeWorkspace === 'ws2' ? 'active' : ''}`}>
-                Testing 2
+                <div className="h-[calc(100vh-32px)] flex justify-center items-center ">
+                    <BlogBio />
+                </div>
             </div>
 
             <div id="ws3" className={`workspace ${activeWorkspace === 'ws3' ? 'active' : ''}`}>
@@ -39,9 +43,10 @@ export default function Desktop() {
                 </div>
             </div>
 
-
             <div id="ws4" className={`workspace ${activeWorkspace === 'ws4' ? 'active' : ''}`}>
-                Testing 2
+                <div className="h-[calc(100vh-32px)] flex justify-center items-center ">
+                    <SpotifyProjects />
+                </div>
             </div>
 
             <div id="ws5"
