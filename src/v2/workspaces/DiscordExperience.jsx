@@ -199,7 +199,7 @@ export default function DiscordExperience() {
      */
     function DisplayChannel({ title, icon, company, role, dates, summary, skills, achievements, contents }) {
         return (
-            <div className="flex flex-col w-full bg-[#313338] ">
+            <div className="flex flex-col w-full bg-[#313338] rounded-br-xl">
 
                 <h2 className="!mb-8 flex gap-6 items-center !px-4 !py-1 border-b border-[#1a1b1e] h-10 !whitespace-nowrap">
                     <span className="flex gap-2 items-center font-semibold text-[#949ba4]">#

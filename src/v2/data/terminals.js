@@ -14,13 +14,7 @@ export const introTerminal = {
         {
             type: "output",
             segments: [
-                { text: "A passionate developer who loves building things and breaking things. Currently crafting elegant solutions to complex problems.", className: "" },
-            ]
-        },
-        {
-            type: "output",
-            segments: [
-                { text: "I spend my time ricing Linux, writing code, and pretending I understand my own Neovim config.", className: "" },
+                {  text: "I'm a full-stack developer focused on building reliable and scalable solutions to real-world problems.",  className: "" },
             ]
         },
         {
@@ -76,7 +70,7 @@ export const contactTerminal = {
 export const experienceTerminal = {
     dir: "experience",
     cmd: "$ search --experience 'Isaiah Aganon'",
-    position: { top: 325, left: 60 },
+    position: { top: 355, left: 60 },
     content: [
         {
             type: "output",

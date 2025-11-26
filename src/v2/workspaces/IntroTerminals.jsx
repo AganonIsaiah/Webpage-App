@@ -2,6 +2,7 @@
 
 import Terminal from "../components/Terminal"
 import { introTerminal, contactTerminal, navTerminal, experienceTerminal, projectTerminal } from "../data/terminals"
+import '@/v2/styles/Desktop.css'
 
 export default function IntroTerminals() {
 

@@ -55,7 +55,7 @@ export default function SystemBar({ activeWorkspace, setActiveWorkspace }) {
                 ))}
             </div>
 
-            <span className="pblue">{weekday} | {formatTime} | {formatDate}</span>
+            <span className="pblue !ml-60">{weekday} | {formatTime} | {formatDate}</span>
 
             <div className="hidden md:flex gap-3 items-center justify-center text-sm pgray">
                 <div className="flex items-center gap-1">
