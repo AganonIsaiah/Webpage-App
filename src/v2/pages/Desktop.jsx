@@ -8,7 +8,7 @@ import IntroTerminals from '../workspaces/IntroTerminals';
 import GooglePortfolio from '../workspaces/GooglePortfolio';
 import DiscordExperience from '../workspaces/DiscordExperience';
 import BlogBio from '../workspaces/BlogBio';
-import SpotifyProjects from '../workspaces/SpotifyProjects';
+import Projects from '../workspaces/Projects';
 
 /**
  * Workspaces (2-5)
@@ -45,7 +45,7 @@ export default function Desktop() {
 
             <div id="ws4" className={`workspace ${activeWorkspace === 'ws4' ? 'active' : ''}`}>
                 <div className="h-[calc(100vh-32px)] flex justify-center items-center ">
-                    <SpotifyProjects />
+                    <Projects />
                 </div>
             </div>
 

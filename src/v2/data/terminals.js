@@ -83,7 +83,7 @@ export const experienceTerminal = {
             type: "output",
             segments: [
                 { text: "Full-Stack Developer (Contract) @ TELUS x Riipen\n", className: "!ml-1 pblue font-semibold" },
-                { text: "12-2026 -- Present\n", className: "!ml-4 pgray" }
+                { text: "12-2025 -- 01-2026\n", className: "!ml-4 pgray" }
             ]
         },
         {

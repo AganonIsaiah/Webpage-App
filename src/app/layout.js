@@ -2,13 +2,13 @@ import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: "isaiah@portfolio ~ $",
-  description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
+  description: "Portfolio and projects by Isaiah Aganon.",
   icons: {
     icon: "/images/en.png"
   },
   openGraph: {
     title: "Isaiah's Webpage",
-    description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
+    description: "Portfolio and projects by Isaiah Aganon.",
     url: "https://isaiahaganon.vercel.app/",
     siteName: "Isaiah Aganon Portfolio",
     images: [

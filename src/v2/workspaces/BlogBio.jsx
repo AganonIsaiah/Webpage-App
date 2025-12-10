@@ -8,7 +8,7 @@ const about = [
 ];
 
 const skills = [
-    "React", "Angular", "Next.js", "Node.js", "FastAPI", "Spring Boot", "Docker", "AWS", "PostgreSQL", "TypeScript", "React", "Java"
+    "React", "Angular", "Next.js", "Node.js", "FastAPI", "Spring Boot", "Docker", "AWS", "PostgreSQL", "TypeScript", "Java", "Python"
 ];
 
 const stats = [
@@ -141,7 +141,6 @@ export default function BlogBio() {
                                     </div>
                                 </div>
                             ))}
-
                         </div>
                     </div>
 
