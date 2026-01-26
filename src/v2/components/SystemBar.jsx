@@ -30,9 +30,7 @@ export default function SystemBar({ activeWorkspace, setActiveWorkspace }) {
     const workspaces = [
         { id: 'ws1', label: '1' },
         { id: 'ws2', label: '2' },
-        { id: 'ws3', label: '3' },
-        { id: 'ws4', label: '4' },
-        { id: 'ws5', label: '5' }
+        { id: 'ws3', label: '3' }
     ];
 
     const Bar = ({ value, color = "bg-green-500" }) => (

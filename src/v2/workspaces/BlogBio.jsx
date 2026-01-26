@@ -3,18 +3,18 @@ import '@/v2/styles/Desktop.css';
 
 const about = [
     "I'm a full-stack developer who enjoys building clean, efficient, and reliable software.",
-    "I’ve worked across frontend, backend, and data systems through internships at RBC and TELUS, where I built dashboards, APIs, and production-ready applications.",
+    "I’ve worked across frontend, backend, and data systems through internships at RBC and through my Riipen x Telus contract where I built dashboards, APIs, and production-ready applications.",
     "I focus on writing maintainable code, designing thoughtful user experiences, and solving real problems with modern tools."
 ];
 
 const skills = [
-    "React", "Angular", "Next.js", "Node.js", "FastAPI", "Spring Boot", "Docker", "AWS", "PostgreSQL", "TypeScript", "React", "Java"
+    "React", "Angular", "Next.js", "Node.js", "FastAPI", "Spring Boot", "Docker", "AWS", "PostgreSQL", "TypeScript", "Java", "Python"
 ];
 
 const stats = [
     { num: "2+", label: "Years of Experience" },
-    { num: "3", label: "Industry Internships" },
-    { num: "7+", label: "Applications Developed & Shipped" }
+    { num: "2", label: "Industry Internships" },
+    { num: "5+", label: "Applications Developed & Shipped" }
 ];
 
 const services = [
@@ -116,7 +116,7 @@ export default function BlogBio() {
                 <div className="container">
                     <div className="hero">
                         <h1>Isaiah Aganon</h1>
-                        <p className="subtitle">Software Developer · Designer · Creator</p>
+                        <p className="subtitle">Software Engineer</p>
                     </div>
 
                     <div id="section-0" className={`scroll-section ${visibleSections.has('section-0') ? 'visible' : ''}`}>

@@ -210,10 +210,9 @@ export const navTerminal = {
         {
             type: "output",
             segments: [
+                { text: "Summary - Workspace 1\n"},
                 { text: "About/Skills - Workspace 2\n" }, // Blog styled black webpage infinite scrolling
-                { text: "Work Experience - Workspace 3\n" }, // Chat gpt styled webpage
-                { text: "Projects - Workspace 4\n" }, // Spotify styled webpage
-                { text: "View Portfolio Webpage V1 - Workspace 5" } // Basic Google Clone
+                { text: "View Portfolio Webpage V1 - Workspace 3" } // Basic Google Clone
             ]
         }
     ]
