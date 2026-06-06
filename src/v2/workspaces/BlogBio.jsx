@@ -1,87 +1,105 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '@/v2/styles/Desktop.css';
 
 const about = [
-    "I'm a full-stack developer who enjoys building clean, efficient, and reliable software.",
-    "I’ve worked across frontend, backend, and data systems through internships at RBC and through my Riipen x Telus contract where I built dashboards, APIs, and production-ready applications.",
-    "I focus on writing maintainable code, designing thoughtful user experiences, and solving real problems with modern tools."
+    "I'm a full-stack developer and entrepreneur based in Toronto, ON.",
+    "On track to complete an Honours B.C.S. at Carleton University (GPA: 11.04/12.0) in June 2027.",
+    "I've shipped production software across multiple internship terms at a major bank, building data-heavy dashboards, analytics tooling, and intelligent interfaces used daily by analysts and senior leadership.",
+    "Outside of work, I build and operate my own SaaS products. Most recently, an AI-powered email outreach platform that reduced a client's annual tooling costs by 90%.",
+    "I care about clean architecture, maintainable code, and software that solves real problems."
+];
+
+const experience = [
+    {
+        role: "Software Developer Intern",
+        company: "Royal Bank of Canada",
+        period: "May 2026 – Present",
+        stack: "TypeScript · Angular · Python · FastAPI · MS SQL",
+        bullets: ["Operational Risk Reporting Dashboard."],
+    },
+    {
+        role: "Teaching Assistant",
+        company: "Carleton University",
+        period: "Jan 2026 – Apr 2026",
+        stack: "JavaScript · HTML · CSS · Node.js · Express.js · SQLite",
+        bullets: ["TA'd web dev course, supporting 24+ students."],
+    },
+    {
+        role: "Software Developer Intern",
+        company: "Royal Bank of Canada",
+        period: "May 2025 – Dec 2025",
+        stack: "TypeScript · Angular · NgRx · RxJS · Tailwind · Vitest · Playwright",
+        bullets: ["Regulatory Audit Tracker, analytics dashboard & virtualized data table."],
+    },
+    {
+        role: "Teaching Assistant",
+        company: "Carleton University",
+        period: "Sep 2024 – Apr 2025",
+        stack: "JavaScript · HTML · CSS · React · Node.js · Express.js · MongoDB · SQLite",
+        bullets: ["Instructed weekly tutorials for 33 students."],
+    }
 ];
 
 const skills = [
-    "React", "Angular", "Next.js", "Node.js", "FastAPI", "Spring Boot", "Docker", "AWS", "PostgreSQL", "TypeScript", "Java", "Python"
+    "TypeScript", "Python", "JavaScript", "Java", "SQL",
+    "React", "Angular", "Next.js", "Tailwind CSS", "NgRx", "RxJS", "Redux",
+    "FastAPI", "Node.js", "Express.js", "pandas", "scikit-learn",
+    "AWS (EC2, SES)", "Docker", "Supabase", "Vercel", "Figma", "Git"
 ];
 
 const stats = [
-    { num: "2+", label: "Years of Experience" },
-    { num: "2", label: "Industry Internships" },
-    { num: "5+", label: "Applications Developed & Shipped" }
+    { num: "11.04", label: "GPA / 12.0" },
+    { num: "3×", label: "Software Developer Co-op Terms" },
+    { num: "1", label: "SaaS Product Shipped" },
 ];
 
 const services = [
     {
-        title: "Full-Stack Development",
-        text: "Building end-to-end web applications using React, Angular, FastAPI, and Spring Boot."
+        title: "Full-Stack Engineering",
+        text: "End-to-end web applications with React, Angular, FastAPI, and Node.js, from architecture to deployment."
     },
     {
-        title: "Backend & API Engineering",
-        text: "Designing REST APIs, authentication systems, and data pipelines with SQL and Python."
+        title: "Enterprise Frontend",
+        text: "Complex UIs, virtualized tables, real-time dashboards, and analytics tooling built for large-scale data."
     },
     {
-        title: "AI & Automation",
-        text: "Developing AI-driven automation tools for outreach, personalization, and data processing."
+        title: "Data & Pipelines",
+        text: "Building data pipelines, processing workflows, and backend systems using Python, pandas, FastAPI, and SQL."
     },
     {
-        title: "UI Engineering & Dashboards",
-        text: "Creating responsive interfaces and data dashboards with TypeScript and modern frontend frameworks."
+        title: "SaaS Products",
+        text: "Building and shipping independent software products, from first commit to paying customers."
     }
 ];
 
 export default function BlogBio() {
-    const starsContainerRef = useRef(null);
-    const [visibleSections, setVisibleSections] = useState(new Set(['section-0']));
+    const [visibleSections, setVisibleSections] = useState(new Set(['hero']));
 
     useEffect(() => {
-        const starsContainer = starsContainerRef.current;
-        if (starsContainer) {
-            for (let i = 0; i < 200; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                starsContainer.appendChild(star);
-            }
-        }
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setVisibleSections(prev => new Set([...prev, entry.target.id]));
+                    }
+                });
+            },
+            { threshold: 0.15, rootMargin: '0px 0px -80px 0px' }
+        );
 
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setVisibleSections(prev => new Set([...prev, entry.target.id]));
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.scroll-section').forEach(section => {
-            observer.observe(section);
-        });
-
+        document.querySelectorAll('.scroll-section').forEach(section => observer.observe(section));
         return () => observer.disconnect();
     }, []);
 
-    const renderLetters = (text) => {
-        return text.split('').map((letter, index) => (
-            <span key={index} className="letter">{letter}</span>
+    const renderLetters = (text) =>
+        text.split('').map((letter, i) => (
+            <span key={i} className="letter">{letter === ' ' ? ' ' : letter}</span>
         ));
-    };
 
     return (
         <div className="!font-sans flex flex-col bg-black text-white h-[93dvh] w-[98dvw] rounded-xl shadow-2xl overflow-hidden">
+
+            {/* Title bar */}
             <div className="!px-3 flex items-center gap-4 w-full h-8 rounded-t-xl flex-shrink-0">
                 <span className="flex gap-2">
                     <button className="terminal-btn bg-[#f7768e]" />
@@ -90,77 +108,89 @@ export default function BlogBio() {
                 </span>
             </div>
 
-            <div className="flex-1 overflow-x-hidden relative">
-
-
-                <div className="noise"></div>
-
-                <div className="stars" ref={starsContainerRef}></div>
-
-                <div className="comet" style={{ animationDelay: '2s' }}></div>
-                <div className="comet" style={{ animationDelay: '6s' }}></div>
-
-                <div className="orbit-ring orbit-1"></div>
-                <div className="orbit-ring orbit-2"></div>
-                <div className="orbit-ring orbit-3"></div>
-
-                <div className="planet planet-1"></div>
-                <div className="planet planet-2"></div>
-                <div className="planet planet-3"></div>
-
-                <div className="black-hole-container">
-                    <div className="black-hole"></div>
-                    <div className="accretion-disk"></div>
-                </div>
+            <div className="flex-1 overflow-x-hidden overflow-y-auto relative">
+ 
 
                 <div className="container">
+
+                    {/* Hero */}
                     <div className="hero">
                         <h1>Isaiah Aganon</h1>
-                        <p className="subtitle">Software Engineer</p>
+                        <p className="subtitle">Full-Stack Developer</p>
                     </div>
 
-                    <div id="section-0" className={`scroll-section ${visibleSections.has('section-0') ? 'visible' : ''}`}>
+                    {/* About */}
+                    <div id="section-about" className={`scroll-section ${visibleSections.has('section-about') ? 'visible' : ''}`}>
                         <span className="section-number">01</span>
                         <h2>{renderLetters('About')}</h2>
-                        <span className="flex flex-col">
-                            {about.map((item, ind) => (
-                                <p key={ind}>{item}</p>
-                            ))}
+                        <span className="flex flex-col mt-4!">
+                            {about.map((item, i) => <p key={i}>{item}</p>)}
                         </span>
                     </div>
 
-                    <div id="section-1" className={`scroll-section ${visibleSections.has('section-1') ? 'visible' : ''}`}>
+                    {/* Experience */}
+                    <div id="section-exp" className={`scroll-section ${visibleSections.has('section-exp') ? 'visible' : ''}`}>
                         <span className="section-number">02</span>
-                        <h2>{renderLetters('Services')}</h2>
+                        <h2>{renderLetters('Experience')}</h2>
+                        <div className="blog-timeline">
+                            {experience.map((item, i) => (
+                                <div className="blog-timeline-item" key={i}>
+                                    <div className="flex flex-col gap-1 mb-3">
+                                        <span className="text-white font-semibold text-xl">{item.role}</span>
+                                        <span className="flex flex-wrap items-center gap-2 text-sm">
+                                            <span style={{ color: '#7aa2f7' }}>{item.company}</span>
+                                            <span style={{ color: '#414868' }}>·</span>
+                                            <span className="text-gray-500">{item.period}</span>
+                                        </span>
+                                        <span className="text-xs mt-1 font-mono" style={{ color: '#414868' }}>{item.stack}</span>
+                                    </div>
+                                    <ul className="flex flex-col gap-1">
+                                        {item.bullets.map((b, j) => (
+                                            <li key={j} className="text-gray-400 text-base flex gap-2">
+                                                <span style={{ color: '#7aa2f7' }} className="mt-0.5 flex-shrink-0">›</span>
+                                                {b}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* What I Build */}
+                    <div id="section-services" className={`scroll-section ${visibleSections.has('section-services') ? 'visible' : ''}`}>
+                        <span className="section-number">03</span>
+                        <h2>{renderLetters('What I Build')}</h2>
                         <div className="cards-grid">
-                            {services.map((item, ind) => (
-                                <div className="card" key={ind}>
+                            {services.map((item, i) => (
+                                <div className="card" key={i}>
                                     <div className="card-content">
                                         <h3>{item.title}</h3>
                                         <p>{item.text}</p>
                                     </div>
                                 </div>
                             ))}
-
                         </div>
                     </div>
 
-                    <div id="section-2" className={`scroll-section ${visibleSections.has('section-2') ? 'visible' : ''}`}>
-                        <span className="section-number">03</span>
+                    {/* Skills */}
+                    <div id="section-skills" className={`scroll-section ${visibleSections.has('section-skills') ? 'visible' : ''}`}>
+                        <span className="section-number">04</span>
                         <h2>{renderLetters('Skills')}</h2>
                         <div className="skills-grid">
-                            {skills.map((item, ind) => (
-                                <div className="skill-item" key={ind}>{item}</div>
+                            {skills.map((item, i) => (
+                                <div className="skill-item" key={i}>{item}</div>
                             ))}
                         </div>
                     </div>
 
-                    <div id="section-3" className={`scroll-section ${visibleSections.has('section-3') ? 'visible' : ''}`}>
-                        <span className="section-number">04</span>
+                    {/* Stats */}
+                    <div id="section-stats" className={`scroll-section ${visibleSections.has('section-stats') ? 'visible' : ''}`}>
+                        <span className="section-number">05</span>
                         <h2>{renderLetters('Stats')}</h2>
                         <div className="stats-grid">
-                            {stats.map((item, ind) => (
-                                <div className="stat-item flex flex-col" key={ind}>
+                            {stats.map((item, i) => (
+                                <div className="stat-item flex flex-col" key={i}>
                                     <span className="stat-number">{item.num}</span>
                                     <span className="stat-label">{item.label}</span>
                                 </div>
@@ -168,14 +198,19 @@ export default function BlogBio() {
                         </div>
                     </div>
 
-                    <div id="section-4" className={`scroll-section contact-section ${visibleSections.has('section-4') ? 'visible' : ''}`}>
+                    {/* Contact */}
+                    <div id="section-contact" className={`scroll-section contact-section ${visibleSections.has('section-contact') ? 'visible' : ''}`}>
                         <h2>{renderLetters('Contact')}</h2>
-                        <p className=''>Available for select projects</p>
+                        <p>Open to internships, contracts, and select projects.</p>
                         <a
                             href="#"
-                            onClick={() => window.open("mailto:IsaiahAganon@cmail.carleton.ca", "_blank")}
-                            className="contact-link">Get in Touch</a>
+                            onClick={() => window.open('mailto:IsaiahAganon@cmail.carleton.ca', '_blank')}
+                            className="contact-link"
+                        >
+                            Get in Touch
+                        </a>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -6,6 +6,8 @@ import {
     experienceTerminal,
     projectTerminal,
     entrepreneurTerminal,
+    contactTerminal,
+    navTerminal
 } from "../data/terminals"
 import '@/v2/styles/Desktop.css'
 
@@ -14,7 +16,9 @@ export default function IntroTerminals() {
         <div className="terminal-grid">
             <div className="terminal-col">
                 <Terminal config={introTerminal} />
-                <Terminal config={experienceTerminal} />
+                {/* <Terminal config={experienceTerminal} /> */}
+                <Terminal config={navTerminal}/>
+                <Terminal config={contactTerminal} />
             </div>
             <div className="terminal-col">
                 <Terminal config={entrepreneurTerminal} />

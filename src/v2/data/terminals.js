@@ -218,7 +218,7 @@ export const entrepreneurTerminal = {
 };
 
 export const projectTerminal = {
-    dir: "project",
+    dir: "projects",
     cmd: "$ git log --projects --oneline",
     content: [
         {
