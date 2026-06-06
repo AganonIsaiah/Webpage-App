@@ -53,24 +53,25 @@ const stats = [
     { num: "1", label: "SaaS Product Shipped" },
 ];
 
-const services = [
-    {
-        title: "Full-Stack Engineering",
-        text: "End-to-end web applications with React, Angular, FastAPI, and Node.js, from architecture to deployment."
-    },
-    {
-        title: "Enterprise Frontend",
-        text: "Complex UIs, virtualized tables, real-time dashboards, and analytics tooling built for large-scale data."
-    },
-    {
-        title: "Data & Pipelines",
-        text: "Building data pipelines, processing workflows, and backend systems using Python, pandas, FastAPI, and SQL."
-    },
-    {
-        title: "SaaS Products",
-        text: "Building and shipping independent software products, from first commit to paying customers."
+const venture = {
+    name: "AI-Powered Email Outreach Platform",
+    period: "Jan 2026 – Present",
+    stack: "Python · FastAPI · TypeScript · Next.js · React · pandas · scikit-learn · AWS · Supabase · Vercel",
+    link: "https://lyyvora-outreach-ui-dev.aganonlabs.com",
+    description: "A SaaS platform that converts uploaded lead lists into personalized, automated email campaigns with no manual effort required.",
+    bullets: [
+        "Scores and ranks leads with a scikit-learn model, then uses OpenAI GPT-4o-mini to generate tailored emails, parallelized across concurrent threads for throughput.",
+        "Automates a 3-step drip sequence via AWS SES and APScheduler, delivering during business hours and streaming real-time generation progress to the frontend via WebSockets.",
+        "Next.js dashboard with JWT auth, role-based access control, a filterable lead table, and CSV export via streaming response to avoid memory bottlenecks.",
+    ],
+    caseStudy: {
+        client: "Lyyvora",
+        industry: "Healthcare",
+        problem: "Paying $2,100/yr across multiple outreach tools with no automation or personalization.",
+        solution: "Onboarded onto the platform as the first client. Uploaded their lead list, configured campaigns, and went live within a day.",
+        result: "Annual tooling cost dropped from $2,100 to $200, a 90% reduction, with fully automated personalized outreach replacing their previous manual process.",
     }
-];
+};
 
 export default function BlogBio() {
     const [visibleSections, setVisibleSections] = useState(new Set(['hero']));
@@ -157,19 +158,68 @@ export default function BlogBio() {
                         </div>
                     </div>
 
-                    {/* What I Build */}
+                    {/* Venture */}
                     <div id="section-services" className={`scroll-section ${visibleSections.has('section-services') ? 'visible' : ''}`}>
                         <span className="section-number">03</span>
-                        <h2>{renderLetters('What I Build')}</h2>
-                        <div className="cards-grid">
-                            {services.map((item, i) => (
-                                <div className="card" key={i}>
-                                    <div className="card-content">
-                                        <h3>{item.title}</h3>
-                                        <p>{item.text}</p>
+                        <h2>{renderLetters('Venture')}</h2>
+                        <div className="blog-timeline">
+                            <div className="blog-timeline-item">
+                                <div className="flex flex-col gap-1 mb-4">
+                                    <div className="flex items-start justify-between gap-4">
+                                        <span className="text-white font-semibold text-xl">{venture.name}</span>
+                                        <a
+                                            href={venture.link}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="text-xs font-mono flex items-center gap-1 flex-shrink-0 transition-opacity hover:opacity-70"
+                                            style={{ color: '#9ece6a' }}
+                                        >
+                                            Live Site
+                                            <span style={{ fontSize: '10px' }}>↗</span>
+                                        </a>
+                                    </div>
+                                    <span className="flex flex-wrap items-center gap-2 text-sm">
+                                        <span style={{ color: '#7aa2f7' }}>Founder &amp; Builder</span>
+                                        <span style={{ color: '#414868' }}>·</span>
+                                        <span className="text-gray-500">{venture.period}</span>
+                                    </span>
+                                    <span className="text-xs mt-1 font-mono" style={{ color: '#414868' }}>{venture.stack}</span>
+                                </div>
+                                <p className="text-gray-400 text-base mb-2! mt-1.5!">{venture.description}</p>
+                                <ul className="flex flex-col gap-2 mb-5">
+                                    {venture.bullets.map((b, i) => (
+                                        <li key={i} className="text-gray-400 text-base flex gap-2">
+                                            <span style={{ color: '#7aa2f7' }} className="mt-0.5 flex-shrink-0">›</span>
+                                            {b}
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="mt-7! rounded-lg overflow-hidden" style={{ border: '1px solid #1e2a3a' }}>
+                                    <div className="px-2! py-1!" style={{ background: '#0d1117', borderBottom: '1px solid #1e2a3a' }}>
+                                        <span className="text-xs font-mono tracking-widest uppercase" style={{ color: '#7aa2f7' }}>Case Study</span>
+                                    </div>
+                                    <div className="p-2.5!" style={{ background: '#080b10' }}>
+                                        <div className="flex items-baseline gap-2 mb-3">
+                                            <span className="text-white font-semibold text-lg">{venture.caseStudy.client}</span>
+                                            <span className="text-xs font-mono px-2 py-0.5 rounded" style={{ background: '#0d1117', color: '#7aa2f7', border: '1px solid #1e2a3a' }}>{venture.caseStudy.industry}</span>
+                                        </div>
+                                        <div className="flex flex-col mt-3!">
+                                            <div>
+                                                <span className="text-xs uppercase tracking-wider font-mono mb-1 block" style={{ color: '#414868' }}>Problem</span>
+                                                <p className="text-gray-400 text-sm">{venture.caseStudy.problem}</p>
+                                            </div>
+                                            <div>
+                                                <span className="text-xs uppercase tracking-wider font-mono mb-1 block" style={{ color: '#414868' }}>Solution</span>
+                                                <p className="text-gray-400 text-sm">{venture.caseStudy.solution}</p>
+                                            </div>
+                                            <div>
+                                                <span className="text-xs uppercase tracking-wider font-mono mb-1 block" style={{ color: '#414868' }}>Result</span>
+                                                <p className="text-gray-400 text-sm">{venture.caseStudy.result}</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
 
