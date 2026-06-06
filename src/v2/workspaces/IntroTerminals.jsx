@@ -1,18 +1,25 @@
 'use client';
 
 import Terminal from "../components/Terminal"
-import { introTerminal, contactTerminal, navTerminal, experienceTerminal, projectTerminal } from "../data/terminals"
+import {
+    introTerminal,
+    experienceTerminal,
+    projectTerminal,
+    entrepreneurTerminal,
+} from "../data/terminals"
 import '@/v2/styles/Desktop.css'
 
 export default function IntroTerminals() {
-
     return (
-        <div>
-            <Terminal config={introTerminal} />
-            <Terminal config={navTerminal} />
-            <Terminal config={experienceTerminal} />
-            <Terminal config={contactTerminal} />
-            <Terminal config={projectTerminal} />
+        <div className="terminal-grid">
+            <div className="terminal-col">
+                <Terminal config={introTerminal} />
+                <Terminal config={experienceTerminal} />
+            </div>
+            <div className="terminal-col">
+                <Terminal config={entrepreneurTerminal} />
+                <Terminal config={projectTerminal} />
+            </div>
         </div>
     );
 }

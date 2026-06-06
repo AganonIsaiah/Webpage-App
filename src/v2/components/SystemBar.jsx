@@ -10,18 +10,17 @@ export default function SystemBar({ activeWorkspace, setActiveWorkspace }) {
 
     useEffect(() => {
         const intervalId = setInterval(() => setTime(new Date()), 1000);
+        return () => clearInterval(intervalId);
+    }, []);
 
+    useEffect(() => {
         const sysInterval = setInterval(() => {
-            setCpu(Math.min(100, Math.max(0, cpu + (Math.random() * 10 - 5))));
-            setRam(Math.min(100, Math.max(0, ram + (Math.random() * 10 - 5))));
-            setBattery(Math.min(100, Math.max(0, battery - 0.01)));
+            setCpu(prev => Math.min(100, Math.max(0, prev + (Math.random() * 10 - 5))));
+            setRam(prev => Math.min(100, Math.max(0, prev + (Math.random() * 10 - 5))));
+            setBattery(prev => Math.min(100, Math.max(0, prev - 0.01)));
         }, 2000);
-
-        return () => {
-            clearInterval(intervalId);
-            clearInterval(sysInterval);
-        };
-    }, [cpu, ram, battery]);
+        return () => clearInterval(sysInterval);
+    }, []);
 
     const formatDate = time?.toISOString().slice(0, 10) ?? 'YYYY-MM-DD';
     const formatTime = time?.toTimeString().slice(0, 8) ?? 'HH:MM:SS';

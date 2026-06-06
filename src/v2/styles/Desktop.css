@@ -109,7 +109,31 @@ body {
 .terminal {
     background: rgba(26, 27, 38, 0.85);
     backdrop-filter: blur(12px);
-    @apply absolute border border-[#414868] rounded-md shadow-xl min-w-[400px] max-w-[550px];
+    @apply border border-[#414868] rounded-md shadow-xl w-full;
+}
+
+.terminal-grid {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    @apply px-5 py-3;
+}
+
+.terminal-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .terminal-grid {
+        flex-direction: column;
+    }
 }
 
 .terminal-header {

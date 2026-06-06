@@ -1,54 +1,11 @@
-import { useState, useRef } from "react";
 import "@/v2/styles/Desktop.css";
 
-let globalZIndex = 1;
-
-export default function Terminal({ config, stackedIndex, stacked }) {
-  const { dir, cmd, content, position: initialPosition } = config;
-
-  const [position, setPosition] = useState(initialPosition || { top: 0, left: 0 });
-  const [dragging, setDragging] = useState(false);
-  const [zIndex, setZIndex] = useState(1);
-  const offset = useRef({ x: 0, y: 0 });
-
-  const computedPosition = stacked
-    ? { top: stackedIndex * 250 + 20, left: 20 } 
-    : position;
-
-  const handleMouseDown = (e) => {
-    globalZIndex += 1;
-    setZIndex(globalZIndex);
-
-    setDragging(true);
-    offset.current = {
-      x: e.clientX - position.left,
-      y: e.clientY - position.top,
-    };
-  };
-
-  const handleMouseMove = (e) => {
-    if (dragging && !stacked) {
-      setPosition({
-        left: e.clientX - offset.current.x,
-        top: e.clientY - offset.current.y,
-      });
-    }
-  };
-
-  const handleMouseUp = () => setDragging(false);
+export default function Terminal({ config }) {
+  const { dir, cmd, content } = config;
 
   return (
-    <div
-      className="terminal !pb-6 flex flex-col absolute"
-      style={{ top: computedPosition.top, left: computedPosition.left, zIndex }}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-    >
-      <div
-        className="terminal-header text-xs cursor-move"
-        onMouseDown={handleMouseDown}
-      >
+    <div className="terminal !pb-6 flex flex-col">
+      <div className="terminal-header text-xs">
         <span>isaiah@portfolio: ~/{dir}</span>
         <span className="flex gap-2">
           <button className="terminal-btn bg-[#f7768e]" />
@@ -62,9 +19,7 @@ export default function Terminal({ config, stackedIndex, stacked }) {
         {content?.map((block, i) => (
           <p
             key={i}
-            className={`whitespace-pre-wrap !mt-1 ${
-              block.type === "comment" ? "pgray" : ""
-            }`}
+            className={`whitespace-pre-wrap !mt-1 ${block.type === "comment" ? "pgray" : ""}`}
           >
             {block.segments.map((seg, j) =>
               seg.link ? (
