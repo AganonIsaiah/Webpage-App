@@ -3,7 +3,7 @@ import '@/v2/styles/Desktop.css';
 
 const about = [
     "I'm a full-stack developer and entrepreneur based in Toronto, ON.",
-    "On track to complete an Honours B.C.S. at Carleton University (GPA: 11.04/12.0) in June 2027.",
+    "On track to complete an Honours B.C.S. at Carleton University in June 2027.",
     "I've shipped production software across multiple internship terms at a major bank, building data-heavy dashboards, analytics tooling, and intelligent interfaces used daily by analysts and senior leadership.",
     "Outside of work, I build and operate my own SaaS products. Most recently, an AI-powered email outreach platform that reduced a client's annual tooling costs by 90%.",
     "I care about clean architecture, maintainable code, and software that solves real problems."
