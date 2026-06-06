@@ -4,16 +4,16 @@ export const metadata = {
   title: "isaiah@portfolio ~ $",
   description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
   icons: {
-    icon: "/images/en.png"
+    icon: "/images/icon.svg"
   },
   openGraph: {
     title: "Isaiah's Webpage",
     description: "Portfolio and projects by Isaiah Aganon, Computer Science student at Carleton University.",
-    url: "https://isaiahaganon.vercel.app/",
+    url: "https://aganonlabs.com",
     siteName: "Isaiah Aganon Portfolio",
     images: [
       {
-        url: "https://isaiahaganon.vercel.app/en.png",
+        url: "https://aganonlabs.com/images/icons.svg",
         width: 1200,
         height: 630,
         alt: "Isaiah Aganon Portfolio",
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Isaiah Aganon",
-              "url": "https://isaiahaganon.vercel.app/",
+              "url": "https://aganonlabs.com",
               "sameAs": [
                 "https://www.linkedin.com/in/isaiah-aganon",
                 "https://github.com/AganonIsaiah"
